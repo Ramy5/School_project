@@ -2,8 +2,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/effect-creative";
+import "swiper/css/navigation";
 
-import { EffectCreative, Autoplay } from "swiper/modules";
+import { EffectCreative, Autoplay, Navigation } from "swiper/modules";
 
 const Home = () => {
   return (
@@ -12,8 +13,12 @@ const Home = () => {
         grabCursor={true}
         effect={"creative"}
         loop
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
         autoplay={{
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         creativeEffect={{
@@ -25,7 +30,7 @@ const Home = () => {
             translate: ["100%", 0, 0],
           },
         }}
-        modules={[EffectCreative, Autoplay]}
+        modules={[EffectCreative, Autoplay, Navigation]}
         className="h-full mySwiper3"
       >
         <SwiperSlide>
@@ -54,6 +59,9 @@ const Home = () => {
             alt=""
           />
         </SwiperSlide>
+
+        <div className="swiper-button-next"></div>
+        <div className="swiper-button-prev"></div>
       </Swiper>
     </main>
   );
