@@ -2,12 +2,31 @@ import navShapeRight from "../../assets/nav/shape-right.svg";
 import navShapeLeft from "../../assets/nav/shape-left.svg";
 import navLogo from "../../assets/nav/nav-logo.png";
 import "./navBarIcon.css";
+import { useEffect } from "react";
 
 const Nav = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const navLeftSide = document.querySelector(".nav_left-side");
+      const navRightSide = document.querySelector(".nav_right-side");
+      const navCenter = document.querySelector(".nav_center");
+
+      if (scrollY > 70) {
+        navLeftSide.style.transform = "translateX(-100%)";
+        navRightSide.style.transform = "translateX(100%)";
+        navCenter.style.transform = "translateY(-20rem)";
+      } else if (scrollY <= 1) {
+        navLeftSide.style.transform = "translateX(0)";
+        navRightSide.style.transform = "translateX(0)";
+        navCenter.style.transform = "translateY(0)";
+      }
+    });
+  }, []);
+
   return (
-    <nav className="relative z-50 grid grid-cols-3">
+    <nav className="fixed top-[43px] z-40 grid grid-cols-3 w-full">
       {/** LEFT SIDE */}
-      <div className="relative">
+      <div className="relative transition-all duration-700 ease-in-out nav_left-side">
         <img
           src={navShapeLeft}
           alt="nav shape"
@@ -20,12 +39,12 @@ const Nav = () => {
       </div>
 
       {/** CENTER */}
-      <div className="flex justify-center -translate-y-10">
+      <div className="flex justify-center transition-all duration-700 -translate-y-10 nav_center">
         <img src={navLogo} alt="nav logo" className="w-36 h-36" />
       </div>
 
       {/** RIGHT SIDE */}
-      <div className="relative">
+      <div className="relative transition-all duration-700 nav_right-side">
         <img
           src={navShapeRight}
           alt="nav shape"
