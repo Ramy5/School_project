@@ -10,12 +10,28 @@ import { IoSearch } from "react-icons/io5";
 import { TfiYoutube } from "react-icons/tfi";
 import shapeLeftImg from "../../assets/header/shape-left.svg";
 import shapeRightImg from "../../assets/header/shape-right.svg";
+import { useEffect } from "react";
 
 const Header = () => {
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const headerLeftSide = document.querySelector(".header_left-side");
+      const headerRightSide = document.querySelector(".header_right-side");
+
+      if (scrollY > 70) {
+        headerLeftSide.style.transform = "translateX(-100%)";
+        headerRightSide.style.transform = "translateX(100%)";
+      } else if (scrollY <= 1) {
+        headerLeftSide.style.transform = "translateX(0)";
+        headerRightSide.style.transform = "translateX(0)";
+      }
+    });
+  }, []);
+
   return (
-    <header className="relative z-50 grid items-center justify-center w-full grid-cols-2">
+    <header className="fixed top-0 z-50 grid items-center justify-center w-full grid-cols-2">
       {/** LEFT SIDE */}
-      <div className="relative flex items-start justify-between h-full py-2 pl-24 pr-48 text-white">
+      <div className="relative flex items-start justify-between h-full py-2 pl-24 pr-48 text-white transition-all duration-700 header_left-side">
         <img
           src={shapeLeftImg}
           alt="shape left"
@@ -90,7 +106,7 @@ const Header = () => {
       </div>
 
       {/** RIGHT SIDE */}
-      <div className="relative flex items-start h-full py-2 pl-48 pr-24 text-white">
+      <div className="relative flex items-start h-full py-2 pl-48 pr-24 text-white transition-all duration-700 header_right-side">
         <img
           src={shapeRightImg}
           alt="shape left"
