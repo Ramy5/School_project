@@ -5,7 +5,7 @@ import Cam_3 from "../../assets/campuses/03.jpg";
 import Cam_4 from "../../assets/campuses/04.jpg";
 import Cam_5 from "../../assets/campuses/05.jpg";
 import AOS from "aos";
-import "aos/dist/aos.css"; // Import AOS styles
+import "aos/dist/aos.css";
 
 const Campuses = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -13,9 +13,7 @@ const Campuses = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY >= 500) {
-        setScrollY(window.scrollY);
-      }
+      setScrollY(window.scrollY);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -26,8 +24,7 @@ const Campuses = () => {
 
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      offset: 150,
+      duration: 500,
     });
   }, []);
 
@@ -55,8 +52,40 @@ const Campuses = () => {
     };
   }, []);
 
-  const clipScroll = (scrollY - 500) * 2.8;
-  console.log("🚀 ~ Campuses ~ clipScroll:", clipScroll);
+  const clipScroll = (scrollY - 500) * 3.5;
+
+  const campusesData = [
+    {
+      image: Cam_1,
+      title: "مدرسة الجزري",
+      desc: "الدولية للعلوم والتكنولوجيا",
+      branch: "فرع أتاكنت ",
+    },
+    {
+      image: Cam_2,
+      title: "مدرسة الجزري",
+      desc: "الدولية للعلوم والتكنولوجيا",
+      branch: "فرع أتاكنت ",
+    },
+    {
+      image: Cam_3,
+      title: "مدرسة الجزري",
+      desc: "الدولية للعلوم والتكنولوجيا",
+      branch: "فرع أتاكنت ",
+    },
+    {
+      image: Cam_4,
+      title: "مدرسة الجزري",
+      desc: "الدولية للعلوم والتكنولوجيا",
+      branch: "فرع أتاكنت ",
+    },
+    {
+      image: Cam_5,
+      title: "مدرسة الجزري",
+      desc: "الدولية للعلوم والتكنولوجيا",
+      branch: "فرع أتاكنت ",
+    },
+  ];
 
   return (
     <div ref={secondSectionRef} className="h-screen">
@@ -64,47 +93,37 @@ const Campuses = () => {
         <div
           className="campuses_image"
           style={{
-            clipPath: `circle(${clipScroll}px at center)`, // Adjusting the scrollY to start from 750px
+            clipPath: `circle(${clipScroll}px at center)`,
           }}
         >
           <div
-            className={`${clipScroll >= 250 ? "flex" : "none"} w-full h-screen`}
+            className={`${
+              clipScroll >= 220 ? "flex flex-col md:flex-row" : "none"
+            } w-full h-screen`}
           >
-            <img
-              src={Cam_1}
-              alt="Image 1"
-              data-aos="fade-down"
-              data-aos-delay="1000"
-              className="w-1/5"
-            />
-            <img
-              src={Cam_2}
-              alt="Image 2"
-              data-aos="fade-down"
-              data-aos-delay="1500"
-              className="w-1/5"
-            />
-            <img
-              src={Cam_3}
-              alt="Image 3"
-              data-aos="fade-down"
-              data-aos-delay="2000"
-              className="w-1/5"
-            />
-            <img
-              src={Cam_4}
-              alt="Image 4"
-              data-aos="fade-down"
-              data-aos-delay="2500"
-              className="w-1/5"
-            />
-            <img
-              src={Cam_5}
-              alt="Image 5"
-              data-aos="fade-down"
-              data-aos-delay="3000"
-              className="w-1/5"
-            />
+            {campusesData &&
+              campusesData.map((item, index) => (
+                <div
+                  key={index}
+                  className="relative w-full md:w-1/5 h-1/5 md:h-full cursor-pointer duration-200 hover:w-full md:hover:w-1/3"
+                  data-aos="fade-down"
+                  data-aos-duration={500 + index * 100}
+                >
+                  <img
+                    src={item.image}
+                    alt={`Image ${index + 1}`}
+                    className="h-full w-full"
+                  />
+                  <div className="absolute top-1/2 md:top-3/4 left-1/4 md:left-1/2 -translate-y-1/2 md:-translate-x-1/2 w-full text-center text-white">
+                    <h2 className="text-3xl font-semibold">{item.title}</h2>
+                    <p className="text-2xl my-3"> {item.desc} </p>
+                    <span className="text-lg font-semibold">
+                      {" "}
+                      {item.branch}{" "}
+                    </span>
+                  </div>
+                </div>
+              ))}
           </div>
         </div>
       </div>
@@ -113,10 +132,3 @@ const Campuses = () => {
 };
 
 export default Campuses;
-
-// <div
-// className="absolute top-1/2 left-1/2"
-// style={{ shapeOutside: "circle(50%)" }}
-// >
-// <p>ALJAZARI SCHOOLS •</p>
-// </div>
