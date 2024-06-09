@@ -11,7 +11,17 @@
 }
 
 body {
-  /* height: 10000px; */
+  overflow-x: hidden;
+}
+
+@layer base {
+  .main__head {
+    @apply text-[60px] font-bold mb-10 text-center text-mainColor uppercase;
+  }
+
+  .main__section-padding {
+    @apply py-14 px-12;
+  }
 }
 
 .campuses_image {

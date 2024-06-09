@@ -56,7 +56,6 @@ const Campuses = () => {
   }, []);
 
   const clipScroll = (scrollY - 500) * 2.8;
-  console.log("🚀 ~ Campuses ~ clipScroll:", clipScroll);
 
   return (
     <div ref={secondSectionRef} className="h-screen">
