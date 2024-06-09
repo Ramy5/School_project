@@ -17,10 +17,10 @@ const Home = () => {
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         }}
-        autoplay={{
-          delay: 5000,
-          disableOnInteraction: false,
-        }}
+        // autoplay={{
+        //   delay: 5000,
+        //   disableOnInteraction: false,
+        // }}
         creativeEffect={{
           prev: {
             shadow: true,
@@ -49,12 +49,14 @@ const Home = () => {
         </SwiperSlide>
         <SwiperSlide>
           <img
+            className="w-full"
             src="https://aljazari.com.tr/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-28-at-2.24.49-PM.jpeg"
             alt=""
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
+            className="w-full"
             src="https://aljazari.com.tr/wp-content/uploads/2024/05/Science-Fair_Webslider.jpg"
             alt=""
           />
