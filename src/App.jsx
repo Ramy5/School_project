@@ -22,6 +22,9 @@ function App() {
                 <LandingPage />
                 <Campuses />
                 <ApplicationForm />
+                <Fingerprint />
+                <EducationalCurriculum />
+                <SchoolType />
                 <GeneralManager />
                 <Graduates />
               </Fragment>
