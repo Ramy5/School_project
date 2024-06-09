@@ -22,11 +22,11 @@ const GeneralManager = () => {
       >
         A WARM WELCOME
       </p>
-      <h2 data-aos="fade-up" className="main__head tracking-wider">
+      <h2 data-aos="fade-up" className="tracking-wider main__head">
         A MESSAGE FROM OUR GENERAL MANAGER
       </h2>
 
-      <div className="px-28 flex justify-between gap-24 items-start">
+      <div className="flex items-start justify-between gap-24 px-28">
         <div
           data-aos="zoom-in-up"
           className="rounded-br-[9rem] overflow-hidden w-[65rem]"
@@ -40,7 +40,7 @@ const GeneralManager = () => {
         </div>
 
         <div data-aos="fade-left">
-          <p className="text-3xl text-gray-500 mb-10">
+          <p className="mb-10 text-3xl text-gray-500">
             Dear Parents and Students,
           </p>
           <p className="text-3xl text-gray-500 mb-10 leading-[3rem]">
@@ -50,7 +50,7 @@ const GeneralManager = () => {
             with such a rich tradition of education.
           </p>
 
-          {/** TODO: ADD BUTTON COMPONENT HERE */}
+          <button className="button">اقرأ المزيد</button>
         </div>
       </div>
     </section>

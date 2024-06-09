@@ -2,8 +2,11 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
   ApplicationForm,
   Campuses,
+  EducationalCurriculum,
+  Fingerprint,
   GeneralManager,
   LandingPage,
+  SchoolType,
 } from "./components";
 import { Fragment } from "react";
 import { About } from "./pages";
