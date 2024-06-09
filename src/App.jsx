@@ -8,6 +8,7 @@ import {
 import { Fragment } from "react";
 import { About } from "./pages";
 import { ParallaxProvider } from "react-scroll-parallax";
+import Graduates from "./components/Home/Graduates/Graduates";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
                 <Campuses />
                 <ApplicationForm />
                 <GeneralManager />
+                <Graduates />
               </Fragment>
             }
           />
