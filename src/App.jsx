@@ -1,14 +1,22 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages";
-import { Header, Nav } from "./components";
+import { Campuses, Header, LandingPage, Nav } from "./components";
+import { Fragment } from "react";
 
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Nav />
+
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route
+          path="/"
+          element={
+            <Fragment>
+              <LandingPage />
+              <Campuses />
+            </Fragment>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

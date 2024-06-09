@@ -11,8 +11,15 @@
 }
 
 body {
-  height: 10000px;
-  overflow-x: hidden;
+  /* height: 10000px; */
+}
+
+.campuses_image {
+  background-image: url(./assets/campuses/00.jpg);
+  background-size: cover;
+  background-position: center;
+  /* clip-path: circle(5% at center); */
+  transform: 0.5s;
 }
 
 .swiper-button-next,
