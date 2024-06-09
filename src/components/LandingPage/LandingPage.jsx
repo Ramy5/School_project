@@ -1,13 +1,13 @@
-import React from "react";
-import Header from "../Header/Header";
-import Nav from "../NavBar/Nav";
 import "swiper/css";
 import "swiper/css/effect-creative";
 import { EffectCreative, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Header from "../Header/Header";
+import Nav from "../NavBar/Nav";
 
 const LandingPage = ({ title }) => {
   const locationPath = location.pathname;
+
   return (
     <div className="relative w-full h-full">
       <div className="absolute top-0 left-0 w-full">
@@ -54,14 +54,14 @@ const LandingPage = ({ title }) => {
               <img
                 src="https://aljazari.com.tr/wp-content/uploads/2024/02/WhatsApp-Image-2024-02-28-at-2.24.49-PM.jpeg"
                 alt=""
-                style={{ height: "100vh", width:"100%" }}
+                style={{ height: "100vh", width: "100%" }}
               />
             </SwiperSlide>
             <SwiperSlide>
               <img
                 src="https://aljazari.com.tr/wp-content/uploads/2024/05/Science-Fair_Webslider.jpg"
                 alt=""
-                style={{ height: "100vh", width:"100%" }}
+                style={{ height: "100vh", width: "100%" }}
               />
             </SwiperSlide>
           </Swiper>
