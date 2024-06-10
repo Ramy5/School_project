@@ -11,28 +11,7 @@
 }
 
 body {
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  background-color: #f0f0f0;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #59c7da;
-  border-radius: 6px;
-  border: 2px solid #f0f0f0;
-}
-
-@layer base {
-  .main__head {
-    @apply text-[60px] font-bold mb-10 text-center text-mainColor uppercase;
-  }
-
-  .main__section-padding {
-    @apply px-12 py-14;
-  }
+  /* height: 10000px; */
 }
 
 .campuses_image {
@@ -164,11 +143,11 @@ body {
   --color: #8f1537;
   padding: 0.8em 1.7em;
   background-color: transparent;
-  border-radius: 0.3em;
+  border-radius: .3em;
   position: relative;
   overflow: hidden;
   cursor: pointer;
-  transition: 0.5s;
+  transition: .5s;
   font-weight: 400;
   font-size: 17px;
   border: 2px solid;
@@ -177,11 +156,10 @@ body {
   color: var(--color);
   z-index: 1;
   font-weight: 700;
-}
-
-.button::before,
-.button::after {
-  content: "";
+ }
+ 
+ .button::before, .button::after {
+  content: '';
   display: block;
   width: 50px;
   height: 50px;
@@ -191,36 +169,36 @@ body {
   z-index: -1;
   background-color: var(--color);
   transition: 1s ease;
-}
-
-.button::before {
+ }
+ 
+ .button::before {
   top: -1em;
   left: -1em;
-}
-
-.button::after {
+ }
+ 
+ .button::after {
   left: calc(100% + 1em);
   top: calc(100% + 1em);
-}
-
-.button:hover::before,
-.button:hover::after {
+ }
+ 
+ .button:hover::before, .button:hover::after {
   height: 410px;
   width: 410px;
-}
-
-.button:hover {
+ }
+ 
+ .button:hover {
   color: #fff;
-}
-
-.button:active {
-  filter: brightness(0.8);
-}
-
+ }
+ 
+ .button:active {
+  filter: brightness(.8);
+ }
+ 
 /* Button */
 
 /* Start School Type */
-.school_type .school_type_img {
+.school_type .school_type_img
+ {
   background-size: cover;
   transform: scale(1);
   transition: all 2s;
@@ -228,13 +206,16 @@ body {
   height: 460px;
   background-repeat: no-repeat;
 }
-.school_type .school_type_img.hide_left {
+.school_type .school_type_img.hide_left
+ {
   background-position-x: -750px;
 }
-.school_type .school_type_img.hide_right {
+.school_type .school_type_img.hide_right
+ {
   background-position-x: 750px;
 }
-.school_type .school_type_img.show {
+.school_type .school_type_img.show
+ {
   background-position-x: 0px;
 }
 .school_type .img_1 {
@@ -258,6 +239,7 @@ body {
 .school_type .img_2 {
   background-image: url("./assets/schoolType/section4-2.jpg");
   /* clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 35%, 100% 100%, 50% 100%, 0 100%, 5% 66%, 5% 40%, 0 0); */
+
   clip-path: polygon(
     0 0,
     7% 31%,
@@ -276,6 +258,7 @@ body {
 .school_type .img_3 {
   background-image: url("./assets/schoolType/section4-3.jpg");
   /* clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 35%, 100% 100%, 50% 100%, 0 100%, 5% 66%, 5% 40%, 0 0); */
+
   clip-path: polygon(
     14% 0,
     14.1% 25%,
@@ -290,7 +273,7 @@ body {
     100% 0,
     38% 0
   );
-}
+  clip-path: polygon(14% 0, 14.1% 25%, 12.1% 55%, 9.7% 68%, 0 100%, 92% 100%, 100% 100%, 100% 73%, 100% 30%, 100% 26%, 100% 0, 38% 0);
 .school_type .img_4 {
   background-image: url("./assets/schoolType/section4-4.jpg");
   /* clip-path: polygon(50% 0%, 100% 0, 96% 33%, 94% 58%, 94% 100%, 50% 100%, 0 100%, 0 71%, 0 41%, 0 0); */
@@ -313,6 +296,7 @@ body {
 
 /* Start News */
 .news .linear_gradient {
+
   background: linear-gradient(
     0deg,
     rgba(250, 166, 26, 0.8) 0%,
@@ -334,29 +318,9 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+
 }
-
-.kinderGarten > div {
-  background: hsla(177, 87%, 79%, 1);
-
-  background: linear-gradient(
-    90deg,
-    hsla(177, 87%, 79%, 1) 0%,
-    hsla(235, 89%, 70%, 1) 100%
-  );
-
-  background: -moz-linear-gradient(
-    90deg,
-    hsla(177, 87%, 79%, 1) 0%,
-    hsla(235, 89%, 70%, 1) 100%
-  );
-
-  background: -webkit-linear-gradient(
-    90deg,
-    hsla(177, 87%, 79%, 1) 0%,
-    hsla(235, 89%, 70%, 1) 100%
-  );
-
-  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BF8F4", endColorstr="#6F7BF7", GradientType=1 );
+.news .linear_gradient:hover {
+  background: linear-gradient(0deg, rgba(250, 166, 26, 1) 0%, rgba(255, 255, 255, 0) 82%)
 }
-/* END KINDERGARTEN */
+/* End News */
