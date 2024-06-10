@@ -4,15 +4,17 @@ import {
   Activities,
   ApplicationForm,
   Campuses,
-  EducationalCurriculum,
   Fingerprint,
   GeneralManager,
   KinderGarten,
-  LandingPage,
   SchoolType,
+  EducationalCurriculum,
+  Header,
+  LandingPage,
+  Nav,
+  News,
 } from "./components";
 import { Home } from "./pages";
-import { Campuses, EducationalCurriculum, Fingerprint, Header, LandingPage, Nav, News } from "./components";
 import { Fragment } from "react";
 import { About } from "./pages";
 import { ParallaxProvider } from "react-scroll-parallax";
@@ -37,6 +39,7 @@ function App() {
                 <GeneralManager />
                 <Graduates />
                 <KinderGarten />
+                <News />
                 <Accreditations />
               </Fragment>
             }
@@ -53,24 +56,6 @@ function App() {
         </Routes>
       </BrowserRouter>
     </ParallaxProvider>
-    <BrowserRouter>
-
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <Fragment>
-              <LandingPage />
-              <Campuses />
-              <Fingerprint />
-              <EducationalCurriculum />
-              <SchoolType />
-              <News />
-            </Fragment>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
   );
 }
 

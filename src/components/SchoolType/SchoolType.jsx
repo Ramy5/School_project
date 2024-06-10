@@ -106,7 +106,7 @@ const SchoolType = () => {
                     {item.schoolType}
                   </h2>
                   <p className="text-xl text-[#244b5a] my-8" style={{lineHeight: "1.8"}}>{item.disc}</p>
-                  <button className="button mt-5">READ MORE </button>
+                  <button className="button mt-4">READ MORE </button>
                 </div>
               </div>
             </div>
