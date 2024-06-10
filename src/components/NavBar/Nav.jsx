@@ -10,11 +10,15 @@ const Nav = () => {
       const navLeftSide = document.querySelector(".nav_left-side");
       const navRightSide = document.querySelector(".nav_right-side");
       const navCenter = document.querySelector(".nav_center");
+      const nav = document.querySelector(".nav");
 
       if (scrollY > 70) {
         navLeftSide.style.transform = "translateX(-100%)";
         navRightSide.style.transform = "translateX(100%)";
         navCenter.style.transform = "translateY(-20rem)";
+      } else if (scrollY > 400) {
+        nav.style.position = "relative";
+        nav.style.top = "auto";
       } else if (scrollY <= 1) {
         navLeftSide.style.transform = "translateX(0)";
         navRightSide.style.transform = "translateX(0)";
@@ -24,7 +28,7 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="fixed top-[43px] z-40 grid grid-cols-3 w-full">
+    <nav className="fixed nav top-[43px] z-40 grid grid-cols-3 w-full">
       {/** LEFT SIDE */}
       <div className="relative transition-all duration-700 ease-in-out nav_left-side">
         <img

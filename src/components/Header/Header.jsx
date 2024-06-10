@@ -17,10 +17,14 @@ const Header = () => {
     window.addEventListener("scroll", () => {
       const headerLeftSide = document.querySelector(".header_left-side");
       const headerRightSide = document.querySelector(".header_right-side");
+      const header = document.querySelector(".header");
 
       if (scrollY > 70) {
         headerLeftSide.style.transform = "translateX(-100%)";
         headerRightSide.style.transform = "translateX(100%)";
+      } else if (scrollY > 400) {
+        header.style.position = "relative";
+        header.style.top = "auto";
       } else if (scrollY <= 1) {
         headerLeftSide.style.transform = "translateX(0)";
         headerRightSide.style.transform = "translateX(0)";
@@ -29,7 +33,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 z-50 grid items-center justify-center w-full grid-cols-2">
+    <header className="fixed header top-0 z-50 grid items-center justify-center w-full grid-cols-2">
       {/** LEFT SIDE */}
       <div className="relative flex items-start justify-between h-full py-2 pl-24 pr-48 text-white transition-all duration-700 header_left-side">
         <img
@@ -46,7 +50,7 @@ const Header = () => {
             />
             <FaFacebookF
               size={20}
-              className="cursor-pointer text-[#3CB09D] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
+              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
             />
           </div>
           <div className="relative group">
@@ -56,7 +60,7 @@ const Header = () => {
             />
             <FaTwitter
               size={20}
-              className="cursor-pointer text-[#3CB09D] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
+              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
             />
           </div>
 
@@ -67,7 +71,7 @@ const Header = () => {
             />
             <FaInstagram
               size={20}
-              className="cursor-pointer text-[#3CB09D] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
+              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
             />
           </div>
 
@@ -78,7 +82,7 @@ const Header = () => {
             />
             <TfiYoutube
               size={20}
-              className="cursor-pointer text-[#3CB09D] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
+              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
             />
           </div>
 
@@ -89,7 +93,7 @@ const Header = () => {
             />
             <FaLinkedin
               size={20}
-              className="cursor-pointer text-[#3CB09D] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
+              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
             />
           </div>
         </div>
