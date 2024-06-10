@@ -1,10 +1,13 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
+  Accreditations,
+  Activities,
   ApplicationForm,
   Campuses,
   EducationalCurriculum,
   Fingerprint,
   GeneralManager,
+  KinderGarten,
   LandingPage,
   SchoolType,
 } from "./components";
@@ -27,9 +30,12 @@ function App() {
                 <ApplicationForm />
                 <Fingerprint />
                 <EducationalCurriculum />
+                <Activities />
                 <SchoolType />
                 <GeneralManager />
                 <Graduates />
+                <KinderGarten />
+                <Accreditations />
               </Fragment>
             }
           />

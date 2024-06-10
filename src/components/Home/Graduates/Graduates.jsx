@@ -10,7 +10,6 @@ import { useEffect, useState } from "react";
 
 const Graduates = () => {
   const [showPoster, setShowPoster] = useState(false);
-  console.log("🚀 ~ Graduates ~ showPoster:", showPoster);
 
   useEffect(() => {
     const timer = setTimeout(() => {

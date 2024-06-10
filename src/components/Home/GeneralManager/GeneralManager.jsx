@@ -50,7 +50,7 @@ const GeneralManager = () => {
             with such a rich tradition of education.
           </p>
 
-          <button className="button">اقرأ المزيد</button>
+          <button className="button">read more</button>
         </div>
       </div>
     </section>

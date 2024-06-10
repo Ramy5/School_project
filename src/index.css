@@ -298,3 +298,36 @@ body {
   );
 }
 /* End School Type */
+
+/* START KINDERGARTEN */
+.kinderGarten {
+  background-image: url("https://aljazari.com.tr/wp-content/uploads/2023/03/section8.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.kinderGarten > div {
+  background: hsla(177, 87%, 79%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(177, 87%, 79%, 1) 0%,
+    hsla(235, 89%, 70%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(177, 87%, 79%, 1) 0%,
+    hsla(235, 89%, 70%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(177, 87%, 79%, 1) 0%,
+    hsla(235, 89%, 70%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BF8F4", endColorstr="#6F7BF7", GradientType=1 );
+}
+/* END KINDERGARTEN */

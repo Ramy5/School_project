@@ -7,6 +7,21 @@ import EducationalCurriculum from "./EducationalCurriculum/EducationalCurriculum
 import SchoolType from "./SchoolType/SchoolType";
 import ApplicationForm from "./Home/ApplicationForm/ApplicationForm";
 import GeneralManager from "./Home/GeneralManager/GeneralManager";
+import KinderGarten from "./Home/KinderGarten/KinderGarten";
+import Accreditations from "./Home/accreditations/Accreditations";
+import Activities from "./Home/Activities/Activities";
 
-
-export { Header, Nav, Campuses, LandingPage, Fingerprint, EducationalCurriculum, SchoolType, ApplicationForm, GeneralManager };
+export {
+  Header,
+  Nav,
+  Campuses,
+  LandingPage,
+  Fingerprint,
+  EducationalCurriculum,
+  SchoolType,
+  ApplicationForm,
+  GeneralManager,
+  KinderGarten,
+  Accreditations,
+  Activities,
+};
