@@ -57,33 +57,33 @@ const Campuses = () => {
   const campusesData = [
     {
       image: Cam_1,
-      title: "مدرسة الجزري",
-      desc: "الدولية للعلوم والتكنولوجيا",
-      branch: "فرع أتاكنت ",
+      title: " Aljazari International ",
+      desc: " School of Science and Technology",
+      branch: " Atakent Int. Campus",
     },
     {
       image: Cam_2,
-      title: "مدرسة الجزري",
-      desc: "الدولية للعلوم والتكنولوجيا",
-      branch: "فرع أتاكنت ",
+      title: " Aljazari International ",
+      desc: " School of Science and Technology",
+      branch: " Atakent Int. Campus",
     },
     {
       image: Cam_3,
-      title: "مدرسة الجزري",
-      desc: "الدولية للعلوم والتكنولوجيا",
-      branch: "فرع أتاكنت ",
+      title: " Aljazari International ",
+      desc: " School of Science and Technology",
+      branch: " Atakent Int. Campus",
     },
     {
       image: Cam_4,
-      title: "مدرسة الجزري",
-      desc: "الدولية للعلوم والتكنولوجيا",
-      branch: "فرع أتاكنت ",
+      title: " Aljazari International ",
+      desc: " School of Science and Technology",
+      branch: " Atakent Int. Campus",
     },
     {
       image: Cam_5,
-      title: "مدرسة الجزري",
-      desc: "الدولية للعلوم والتكنولوجيا",
-      branch: "فرع أتاكنت ",
+      title: " Aljazari International ",
+      desc: " School of Science and Technology",
+      branch: " Atakent Int. Campus",
     },
   ];
 
@@ -107,7 +107,7 @@ const Campuses = () => {
                   key={index}
                   className="relative w-full md:w-1/5 h-1/5 md:h-full cursor-pointer duration-200 hover:w-full md:hover:w-1/3"
                   data-aos="fade-down"
-                  data-aos-duration={500 + index * 100}
+                  // data-aos-duration={500 + index * 100}
                 >
                   <img
                     src={item.image}

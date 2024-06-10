@@ -3,18 +3,22 @@ import EducationalImg from "../../assets/educationalCurriculum/undraw_book_lover
 
 const EducationalCurriculum = () => {
   return (
-    <div className="container mx-auto py-16" data-aos="fade-up" ata-aos-duration="2000">
+    <div
+      className="container mx-auto py-16"
+      data-aos="fade-up"
+      ata-aos-duration="2000"
+    >
       <div className="flex items-center justify-between w-full">
         <div className="w-1/2 relative z-50">
-          <span className="text-lg text-[#8f1537]">منهاج</span>
+          <span className="text-lg text-[#8f1537]">ALJAZARI</span>
           <h2 className="text-3xl font-semibold text-[#8f1537]">
-            الجزري التعليمي
+            LEARNING PROGRAM
           </h2>
           <p className="text-xl text-[#244b5a] my-10">
-            يهدف منهاج الجزري التعليمي إلى إعداد جيل فاضل و سعيد و منتج و
-            اجتماعي, ذو خلفية علمية من أجل عالم أفضل.
+            The program aims to educate and nurture a virtuous, happy,
+            scientific, productive and social generation for a better world.
           </p>
-          <button className="button">اقرأ المزيد</button>
+          <button className="button">READ MORE</button>
         </div>
         <div className="relative w-1/2 flex justify-end">
           <img
