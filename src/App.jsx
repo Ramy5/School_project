@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages";
-import { Campuses, EducationalCurriculum, Fingerprint, Header, LandingPage, Nav } from "./components";
+import { Campuses, EducationalCurriculum, Fingerprint, Header, LandingPage, Nav, News } from "./components";
 import { Fragment } from "react";
 import SchoolType from "./components/SchoolType/SchoolType";
 
@@ -18,6 +18,7 @@ function App() {
               <Fingerprint />
               <EducationalCurriculum />
               <SchoolType />
+              <News />
             </Fragment>
           }
         />

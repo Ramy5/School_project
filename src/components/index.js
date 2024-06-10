@@ -5,6 +5,7 @@ import LandingPage from "./LandingPage/LandingPage";
 import Fingerprint from "./Fingerprint/Fingerprint";
 import EducationalCurriculum from "./EducationalCurriculum/EducationalCurriculum";
 import SchoolType from "./SchoolType/SchoolType";
+import News from "./News/News";
 
 
-export { Header, Nav, Campuses, LandingPage, Fingerprint, EducationalCurriculum, SchoolType };
+export { Header, Nav, Campuses, LandingPage, Fingerprint, EducationalCurriculum, SchoolType, News };
