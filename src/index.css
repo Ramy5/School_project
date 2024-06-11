@@ -43,9 +43,28 @@ body {
   transform: 0.5s;
 }
 
-.swiper-button-next,
+/* .swiper-button-next,
 .swiper-button-prev {
   margin: 0 3rem;
+} */
+
+.swiper-slide {
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.swiper-slide-active {
+  opacity: 1 !important; /* Fully visible */
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.7 !important;
+}
+
+.swiper-slide-prev + .swiper-slide-prev,
+.swiper-slide-next + .swiper-slide-next {
+  opacity: 0.5 !important;
 }
 
 /* GLOBAL ANIMATION */
@@ -161,7 +180,7 @@ body {
 
 /* Button */
 .button {
-  --color: #8f1537;
+  --color: #59c7da;
   padding: 0.8em 1.7em;
   background-color: transparent;
   border-radius: 0.3em;

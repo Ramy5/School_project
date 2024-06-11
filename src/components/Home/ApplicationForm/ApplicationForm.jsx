@@ -32,30 +32,30 @@ const ApplicationForm = () => {
         {({ values }) => {
           return (
             <Form className="bg-[#f1f1f1] py-10 px-28 rounded-3xl relative">
-              <div className="grid lg:grid-cols-2 gap-x-24 gap-y-8 items-center justify-between">
-                <div className="mb-4 relative group">
+              <div className="grid items-center justify-between lg:grid-cols-2 gap-x-24 gap-y-8">
+                <div className="relative mb-4 group">
                   <input
                     type="text"
-                    className="w-full py-2 border-b border-slate-600 bg-transparent text-xl focus:outline-none"
+                    className="w-full py-2 text-xl bg-transparent border-b border-slate-600 focus:outline-none"
                     name="full_name"
                     id="name"
                     required
                   />
                   <label
                     htmlFor="name"
-                    className="block mt-2 capitalize text-slate-800 text-xl font-bold absolute top-0 left-0 group-focus-within:-translate-y-8 transition-all duration-500"
+                    className="absolute top-0 left-0 block mt-2 text-xl font-bold capitalize transition-all duration-500 text-slate-800 group-focus-within:-translate-y-8"
                   >
                     Full name
                   </label>
                 </div>
 
-                <div className="mb-4 w-full">
+                <div className="w-full mb-4">
                   <select
                     name="our_school"
                     defaultValue={"Our School"}
-                    className="w-full py-2 cursor-pointer border-b border-slate-600 font-bold  bg-transparent text-xl focus-within:outline-none focus:outline-none"
+                    className="w-full py-2 text-xl font-bold bg-transparent border-b cursor-pointer border-slate-600 focus-within:outline-none focus:outline-none"
                   >
-                    <option defaultValue disabled>
+                    <option defaultValue disabled hidden>
                       Our School
                     </option>
                     <option
@@ -79,27 +79,27 @@ const ApplicationForm = () => {
                   </select>
                 </div>
 
-                <div className="mb-4 relative group">
+                <div className="relative mb-4 group">
                   <input
                     type="email"
-                    className="w-full py-2 border-b border-slate-600 bg-transparent text-xl focus:outline-none"
+                    className="w-full py-2 text-xl bg-transparent border-b border-slate-600 focus:outline-none"
                     name="email"
                     id="email"
                     required
                   />
                   <label
                     htmlFor="email"
-                    className="block mt-2 capitalize text-slate-800 text-xl font-bold absolute top-0 left-0 group-focus-within:-translate-y-8 transition-all duration-500"
+                    className="absolute top-0 left-0 block mt-2 text-xl font-bold capitalize transition-all duration-500 text-slate-800 group-focus-within:-translate-y-8"
                   >
                     Email
                   </label>
                 </div>
 
-                <div className="mb-4 w-full">
+                <div className="w-full mb-4">
                   <select
                     name="grade"
                     defaultValue={"Grade"}
-                    className="w-full py-2 cursor-pointer border-b border-slate-600 font-bold focus-within:border-none  bg-transparent text-xl"
+                    className="w-full py-2 text-xl font-bold bg-transparent border-b cursor-pointer border-slate-600 focus-within:border-none"
                   >
                     <option defaultValue disabled className="hidden">
                       Grade
@@ -126,11 +126,11 @@ const ApplicationForm = () => {
                 </div>
               </div>
 
-              <div className="flex justify-between gap-x-12 items-center mt-8">
+              <div className="flex items-center justify-between mt-8 gap-x-12">
                 <select
                   name="country_code"
                   defaultValue={"Country Code"}
-                  className="w-56 py-2 cursor-pointer border-b border-slate-600 font-bold  bg-transparent text-xl focus:outline-none"
+                  className="w-56 py-2 text-xl font-bold bg-transparent border-b cursor-pointer border-slate-600 focus:outline-none"
                 >
                   <option defaultValue disabled className="hidden">
                     Country Code
@@ -155,24 +155,24 @@ const ApplicationForm = () => {
                   </option>
                 </select>
 
-                <div className="relative group w-full">
+                <div className="relative w-full group">
                   <input
                     type="phone"
-                    className="w-full py-2 border-b border-slate-600 bg-transparent text-xl focus:outline-none"
+                    className="w-full py-2 text-xl bg-transparent border-b border-slate-600 focus:outline-none"
                     name="phone"
                     id="phone"
                     required
                   />
                   <label
                     htmlFor="phone"
-                    className="block mt-2 capitalize text-slate-800 text-xl font-bold absolute top-0 left-0 group-focus-within:-translate-y-8 transition-all duration-500"
+                    className="absolute top-0 left-0 block mt-2 text-xl font-bold capitalize transition-all duration-500 text-slate-800 group-focus-within:-translate-y-8"
                   >
                     Phone No
                   </label>
                 </div>
               </div>
 
-              <p className="mt-8 flex items-center gap-2 text-lg">
+              <p className="flex items-center gap-2 mt-8 text-lg">
                 <input type="checkbox" name="agree" className="w-4 h-4" />
                 <p>
                   <span>I agree to the </span>
