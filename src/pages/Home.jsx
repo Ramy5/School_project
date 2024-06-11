@@ -13,9 +13,12 @@ const Home = () => {
         grabCursor={true}
         effect={"creative"}
         loop
+        keyboard={{
+          enabled: true,
+        }}
         navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
+          nextEl: ".slider_arrows_leftside",
+          prevEl: ".slider_arrows_leftside",
         }}
         // autoplay={{
         //   delay: 5000,
@@ -24,7 +27,7 @@ const Home = () => {
         creativeEffect={{
           prev: {
             shadow: true,
-            translate: ["-20%", 0, -1],
+            translate: [0, 0, -400],
           },
           next: {
             translate: ["100%", 0, 0],
@@ -41,7 +44,8 @@ const Home = () => {
             loop
           >
             <source
-              src="https://aljazari.com.tr/wp-content/uploads/2023/12/website-slide-2023-second-version-2.mp4"
+              src="https://aljazari.com.tr/wp-content/uploads/2023/12/we
+              bsite-slide-2023-second-version-2.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.
@@ -61,9 +65,22 @@ const Home = () => {
             alt=""
           />
         </SwiperSlide>
-
-        <div className="swiper-button-next"></div>
-        <div className="swiper-button-prev"></div>
+        <div
+          className="slider_arrows_rightside"
+          style={{ transform: "rotate(-270deg)", left: "100px", right: "auto" }}
+        >
+          <div className="slider_arrows"></div>
+          <div className="slider_arrows"></div>
+          <div className="slider_arrows"></div>
+        </div>
+        <div
+          className="slider_arrows_leftside"
+          style={{ transform: "rotate(270deg)", right: "100px", left: "auto" }}
+        >
+          <div className="slider_arrows"></div>
+          <div className="slider_arrows"></div>
+          <div className="slider_arrows"></div>
+        </div>
       </Swiper>
     </main>
   );

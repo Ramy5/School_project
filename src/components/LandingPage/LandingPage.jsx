@@ -1,9 +1,12 @@
 import "swiper/css";
 import "swiper/css/effect-creative";
-import { EffectCreative, Autoplay } from "swiper/modules";
+import { EffectCreative, Autoplay, Navigation } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Header from "../Header/Header";
 import Nav from "../NavBar/Nav";
+
+import "./HomeArrowsSlidesAnimation.css";
+import "swiper/css/navigation";
 
 const LandingPage = ({ title }) => {
   const locationPath = location.pathname;
@@ -20,9 +23,9 @@ const LandingPage = ({ title }) => {
             grabCursor={true}
             effect={"creative"}
             loop
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
+            navigation={{
+              nextEl: ".slider_arrows_rightside",
+              prevEl: ".slider_arrows_leftside",
             }}
             creativeEffect={{
               prev: {
@@ -33,8 +36,8 @@ const LandingPage = ({ title }) => {
                 translate: ["100%", 0, 0],
               },
             }}
-            modules={[EffectCreative, Autoplay]}
-            className="h-full mySwiper3"
+            modules={[EffectCreative, Navigation]}
+            className="mySwiper3"
           >
             <SwiperSlide>
               <video
@@ -64,6 +67,17 @@ const LandingPage = ({ title }) => {
                 style={{ height: "100vh", width: "100%" }}
               />
             </SwiperSlide>
+
+            <div className="slider_arrows_leftside">
+              <div className="slider_arrows"></div>
+              <div className="slider_arrows"></div>
+              <div className="slider_arrows"></div>
+            </div>
+            <div className="slider_arrows_rightside">
+              <div className="slider_arrows"></div>
+              <div className="slider_arrows"></div>
+              <div className="slider_arrows"></div>
+            </div>
           </Swiper>
         </main>
       ) : (
