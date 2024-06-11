@@ -6,7 +6,6 @@ import School_4 from "../../assets/schoolType/section4-4.jpg";
 
 const SchoolType = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
-  console.log("🚀 ~ SchoolType ~ scrollPosition:", scrollPosition);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,8 +27,6 @@ const SchoolType = () => {
       schoolType: "ALJAZARI",
       disc: "Aljazari International Schools of Science and Technology are the center of the theory's journey into practice. The curriculum is applied in all disciplines.",
       class: "img_1",
-      //   style:
-      //     "polygon(50% 0%, 100% 0, 91% 41%, 88% 68%, 86% 100%, 100% 100%, 0 100%, 0 65%, 0 35%, 0 0)",
     },
     {
       index: 2,
@@ -38,9 +35,6 @@ const SchoolType = () => {
       schoolType: "ALJAZARI",
       disc: "Aljazari International Schools of Science and Technology are the center of the theory's journey into practice. The curriculum is applied in all disciplines.",
       class: "img_2",
-
-      //   style:
-      //     "polygon(50% 0%, 100% 0, 100% 35%, 100% 35%, 100% 100%, 50% 100%, 0 100%, 5% 66%, 5% 40%, 0 0)",
     },
     {
       index: 3,
@@ -49,9 +43,6 @@ const SchoolType = () => {
       schoolType: "ALJAZARI",
       disc: "Aljazari International Schools of Science and Technology are the center of the theory's journey into practice. The curriculum is applied in all disciplines.",
       class: "img_3",
-
-      //   style:
-      //     "polygon(50% 0%, 100% 0, 100% 35%, 100% 35%, 100% 100%, 50% 100%, 0 100%, 5% 66%, 5% 40%, 0 0)",
     },
     {
       index: 4,
@@ -60,16 +51,12 @@ const SchoolType = () => {
       schoolType: "ALJAZARI",
       disc: "Aljazari International Schools of Science and Technology are the center of the theory's journey into practice. The curriculum is applied in all disciplines.",
       class: "img_4",
-
-      //   style:
-      //     "polygon(50% 0%, 100% 0, 96% 33%, 94% 58%, 94% 100%, 50% 100%, 0 100%, 0 71%, 0 41%, 0 0)",
     },
   ];
   return (
     <div className="school_type">
       {SchoolTypeData &&
         SchoolTypeData.map((item) => {
-          console.log("🚀 ~ SchoolType ~ item:", item);
           return (
             <div
               key={item.index}
