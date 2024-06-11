@@ -360,3 +360,40 @@ body {
   filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BF8F4", endColorstr="#6F7BF7", GradientType=1 );
 }
 /* END KINDERGARTEN */
+.camp-0 {
+  animation-delay: 0.3s !important;
+}
+
+.camp-1 {
+  animation-delay: 0.5s !important;
+}
+
+.camp-2 {
+  animation-delay: 0.7s !important;
+}
+
+.camp-3 {
+  animation-delay: 0.9s !important;
+}
+
+.camp-4 {
+  animation-delay: 1.1s !important;
+}
+
+.campuse_animation {
+  animation: camp 1s;
+  animation-fill-mode: both;
+  animation-delay: 0.25s;
+  opacity: 0;
+}
+
+@keyframes camp {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
