@@ -91,7 +91,7 @@ const SchoolType = () => {
                 ></div>
               </div>
 
-              <div className="w-1/2 relative z-50 ">
+              <div className="w-1/2 relative z-50 px-[3rem]">
                 <div
                   className={`${
                     item.index == 1 || item.index == 4
@@ -105,8 +105,13 @@ const SchoolType = () => {
                   <h2 className="text-3xl font-semibold text-[#8f1537]">
                     {item.schoolType}
                   </h2>
-                  <p className="text-xl text-[#244b5a] my-8" style={{lineHeight: "1.8"}}>{item.disc}</p>
-                  <button className="button mt-4">READ MORE </button>
+                  <p
+                    className="text-xl text-[#244b5a] my-8"
+                    style={{ lineHeight: "1.8" }}
+                  >
+                    {item.disc}
+                  </p>
+                  <button className="mt-4 button">READ MORE </button>
                 </div>
               </div>
             </div>

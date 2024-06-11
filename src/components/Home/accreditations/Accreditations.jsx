@@ -1,6 +1,14 @@
+import { useEffect } from "react";
 import styled from "./Accreditations.module.css";
+import Aos from "aos";
 
 const Accreditations = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
+
   return (
     <section className="main__section-padding" data-aos="fade-up">
       <h2 className="main__head">ACCREDITATIONS</h2>
@@ -19,6 +27,7 @@ const Accreditations = () => {
         <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3">
           <div className="flex items-center justify-center w-full p-20 border border-gray-300">
             <img
+              data-aos="fade-up"
               className="w-48 hover:!filter-none transition-all duration-200"
               style={{ filter: "grayscale(100%)" }}
               src="https://aljazari.com.tr/wp-content/uploads/2023/03/accreditations-1.png"
@@ -27,6 +36,7 @@ const Accreditations = () => {
           </div>
           <div className="flex items-center justify-center w-full p-20 border border-gray-300">
             <img
+              data-aos="fade-up"
               className="w-48  hover:!filter-none transition-all duration-200"
               style={{ filter: "grayscale(100%)" }}
               src="https://aljazari.com.tr/wp-content/uploads/2023/03/accreditations-9.png"
@@ -35,6 +45,7 @@ const Accreditations = () => {
           </div>
           <div className="flex items-center justify-center w-full p-20 border border-gray-300">
             <img
+              data-aos="fade-up"
               className="w-48  hover:!filter-none transition-all duration-200"
               style={{ filter: "grayscale(100%)" }}
               src="https://aljazari.com.tr/wp-content/uploads/2023/03/accreditations-5.png"
@@ -43,6 +54,7 @@ const Accreditations = () => {
           </div>
           <div className="flex items-center justify-center w-full p-20 border border-gray-300">
             <img
+              data-aos="fade-up"
               className="w-48  hover:!filter-none transition-all duration-200"
               style={{ filter: "grayscale(100%)" }}
               src="https://aljazari.com.tr/wp-content/uploads/2023/04/accreditations-7.png"
@@ -51,6 +63,7 @@ const Accreditations = () => {
           </div>
           <div className="flex items-center justify-center w-full p-20 border border-gray-300">
             <img
+              data-aos="fade-up"
               className="w-48  hover:!filter-none transition-all duration-200"
               style={{ filter: "grayscale(100%)" }}
               src="https://aljazari.com.tr/wp-content/uploads/2023/04/accreditations-8.png"
@@ -59,6 +72,7 @@ const Accreditations = () => {
           </div>
           <div className="flex items-center justify-center w-full p-20 border border-gray-300">
             <img
+              data-aos="fade-up"
               className="w-48  hover:!filter-none transition-all duration-200"
               style={{ filter: "grayscale(100%)" }}
               src="https://aljazari.com.tr/wp-content/uploads/2023/03/accreditations-4.png"
@@ -67,6 +81,7 @@ const Accreditations = () => {
           </div>
           <div className="flex items-center justify-center w-full p-20 border border-gray-300">
             <img
+              data-aos="fade-up"
               className="w-48  hover:!filter-none transition-all duration-200"
               style={{ filter: "grayscale(100%)" }}
               src="https://aljazari.com.tr/wp-content/uploads/2023/12/WA_Logo_Colored.png"
@@ -75,6 +90,7 @@ const Accreditations = () => {
           </div>
           <div className="flex items-center justify-center w-full p-20 border border-gray-300">
             <img
+              data-aos="fade-up"
               className="w-48  hover:!filter-none transition-all duration-200"
               style={{ filter: "grayscale(100%)" }}
               src="https://aljazari.com.tr/wp-content/uploads/2024/06/ib-world-school-logo-1-colour.png"

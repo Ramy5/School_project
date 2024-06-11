@@ -23,8 +23,7 @@ const Header = () => {
         headerLeftSide.style.transform = "translateX(-100%)";
         headerRightSide.style.transform = "translateX(100%)";
       } else if (scrollY > 400) {
-        header.style.position = "relative";
-        header.style.top = "auto";
+        header.setAttribute("style", "z-index: -1");
       } else if (scrollY <= 1) {
         headerLeftSide.style.transform = "translateX(0)";
         headerRightSide.style.transform = "translateX(0)";
@@ -33,7 +32,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed header top-0 z-50 grid items-center justify-center w-full grid-cols-2">
+    <header className="fixed top-0 z-50 grid items-center justify-center w-full grid-cols-2 header">
       {/** LEFT SIDE */}
       <div className="relative flex items-start justify-between h-full py-2 pl-24 pr-48 text-white transition-all duration-700 header_left-side">
         <img
