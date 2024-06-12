@@ -247,86 +247,88 @@ body {
   height: 460px;
   background-repeat: no-repeat;
 }
-.school_type .school_type_img.hide_left {
-  background-position-x: -750px;
+
+.school_img_animation_left {
+  animation: schoolTypeLeft 1.5s linear, scaleDown 2s ease-in-out 1.5s;
 }
-.school_type .school_type_img.hide_right {
-  background-position-x: 750px;
+@keyframes schoolTypeLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
-.school_type .school_type_img.show {
-  background-position-x: 0px;
+
+.school_img_animation_right {
+  animation: schoolTypeRight 1.5s ease-in-out, scaleDown 2s ease-in-out 1.5s;
 }
+
+@keyframes schoolTypeRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleDown {
+  0% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
 .school_type .img_1 {
   background-image: url("./assets/schoolType/home1.jpg");
-  /* clip-path: polygon(50% 0%, 100% 0, 91% 41%, 88% 68%, 86% 100%, 100% 100%, 0 100%, 0 65%, 0 35%, 0 0); */
-  clip-path: polygon(
-    0 0,
-    0% 20%,
-    0 47%,
-    0% 80%,
-    0 100%,
-    58% 100%,
-    100% 100%,
-    88% 69%,
-    81% 47%,
-    77% 27%,
-    73% 0,
-    38% 0
-  );
 }
 .school_type .img_2 {
   background-image: url("./assets/schoolType/section4-2.jpg");
-  /* clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 35%, 100% 100%, 50% 100%, 0 100%, 5% 66%, 5% 40%, 0 0); */
-  clip-path: polygon(
-    0 0,
-    7% 31%,
-    11% 55%,
-    13% 81%,
-    14% 100%,
-    58% 100%,
-    100% 100%,
-    100% 73%,
-    100% 51%,
-    100% 30%,
-    100% 0,
-    38% 0
-  );
 }
 .school_type .img_3 {
   background-image: url("./assets/schoolType/section4-3.jpg");
-  /* clip-path: polygon(50% 0%, 100% 0, 100% 35%, 100% 35%, 100% 100%, 50% 100%, 0 100%, 5% 66%, 5% 40%, 0 0); */
-  clip-path: polygon(
-    14% 0,
-    14.1% 25%,
-    12.1% 55%,
-    9.7% 68%,
-    0 100%,
-    92% 100%,
-    100% 100%,
-    100% 73%,
-    100% 30%,
-    100% 26%,
-    100% 0,
-    38% 0
-  );
 }
 .school_type .img_4 {
   background-image: url("./assets/schoolType/section4-4.jpg");
-  /* clip-path: polygon(50% 0%, 100% 0, 96% 33%, 94% 58%, 94% 100%, 50% 100%, 0 100%, 0 71%, 0 41%, 0 0); */
-  clip-path: polygon(
-    0 0,
-    0% 20%,
-    0 47%,
-    0% 80%,
-    0 100%,
-    58% 100%,
-    100% 100%,
-    88% 68%,
-    81% 45%,
-    77% 27%,
-    73% 0,
-    38% 0
-  );
+}
+
+.school_type .imgClip-1,
+.school_type .imgClip-4 {
+  width: 600px;
+  height: 646px;
+  top: 0;
+  left: 85%;
+  border-bottom-left-radius: 457px;
+}
+
+.school_type .imgClip-2,
+.school_type .imgClip-3 {
+  width: 690px;
+  height: 690px;
+  right: 70%;
+}
+
+.school_type .imgClip-2 {
+  top: -45%;
+  border-top-right-radius: 675px;
+}
+
+.school_type .imgClip-3 {
+  top: 0%;
+  border-bottom-right-radius: 675px;
+}
+@media (max-width: 1122px) {
+  .school_type .imgClip-1,
+  .school_type .imgClip-4 {
+    left: 75%;
+  }
+  .school_type .imgClip-2,
+  .school_type .imgClip-3 {
+    right: 56%;
+  }
 }
 /* End School Type */
 
@@ -381,6 +383,7 @@ body {
 /* END KINDERGARTEN */
 .camp-0 {
   animation-delay: 0.3s !important;
+  /* transition: width 0.7s ease; */
 }
 
 .camp-1 {
