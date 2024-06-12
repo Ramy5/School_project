@@ -26,7 +26,6 @@ const SchoolType = () => {
       schoolName: "APPLIED SCHOOL",
       schoolType: "ALJAZARI",
       disc: "Aljazari International Schools of Science and Technology are the center of the theory's journey into practice. The curriculum is applied in all disciplines.",
-      class: "img_1",
     },
     {
       index: 2,
@@ -34,7 +33,6 @@ const SchoolType = () => {
       schoolName: "APPLIED SCHOOL",
       schoolType: "ALJAZARI",
       disc: "Aljazari International Schools of Science and Technology are the center of the theory's journey into practice. The curriculum is applied in all disciplines.",
-      class: "img_2",
     },
     {
       index: 3,
@@ -42,7 +40,6 @@ const SchoolType = () => {
       schoolName: "APPLIED SCHOOL",
       schoolType: "ALJAZARI",
       disc: "Aljazari International Schools of Science and Technology are the center of the theory's journey into practice. The curriculum is applied in all disciplines.",
-      class: "img_3",
     },
     {
       index: 4,
@@ -50,9 +47,9 @@ const SchoolType = () => {
       schoolName: "APPLIED SCHOOL",
       schoolType: "ALJAZARI",
       disc: "Aljazari International Schools of Science and Technology are the center of the theory's journey into practice. The curriculum is applied in all disciplines.",
-      class: "img_4",
     },
   ];
+
   return (
     <div className="school_type">
       {SchoolTypeData &&
@@ -66,15 +63,18 @@ const SchoolType = () => {
                   : "flex-row"
               } flex items-center h-[460px] overflow-hidden relative`}
             >
-              <div className="w-1/2 overflow-hidden">
+              <div className="w-1/2 overflow-hidden relative">
                 <div
-                  className={`${item.class} school_type_img ${
-                    scrollPosition > 2200
-                      ? "show"
-                      : item.index == 2 || item.index == 3
-                      ? "hide_right"
-                      : "hide_left"
+                  className={`img_${item.index} !transition-all !duration-300 school_type_img ${
+                    scrollPosition > 3800 && (item.index == 1 || item.index == 4)
+                      ? "school_img_animation_left"
+                      : scrollPosition > 3800 && (item.index == 2 || item.index == 3)
+                      ? "school_img_animation_right"
+                      : ""
                   }`}
+                ></div>
+                <div
+                  className={`imgClip-${item.index} absolute bg-white`}
                 ></div>
               </div>
 
@@ -86,10 +86,10 @@ const SchoolType = () => {
                       : "float-start ps-5"
                   } w-9/12`}
                 >
-                  <span className="text-lg text-[#8f1537]">
+                  <span className="text-lg text-mainColor">
                     {item.schoolName}
                   </span>
-                  <h2 className="text-3xl font-semibold text-[#8f1537]">
+                  <h2 className="text-3xl font-semibold text-mainColor">
                     {item.schoolType}
                   </h2>
                   <p

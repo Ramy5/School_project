@@ -9,7 +9,7 @@ const News = () => {
       image: News_1,
       title: "Announcement and Congratulations to the Scholarship Winners!",
       disc: "We are thrilled to announce the recipients of this year's scholarship! After careful consideration, 7 outstanding students have been selected for their exceptional achievements, dedication to academic excellence, and impactful contributions to our community....",
-      color: "#8f1537",
+      color: "#59C7DA",
     },
     {
       image: News_2,
@@ -31,7 +31,7 @@ const News = () => {
       image: News_1,
       title: "Announcement and Congratulations to the Scholarship Winners!",
       disc: "We are thrilled to announce the recipients of this year's scholarship! After careful consideration, 7 outstanding students have been selected for their exceptional achievements, dedication to academic excellence, and impactful contributions to our community....",
-      color: "#8f1537",
+      color: "#59C7DA",
     },
     {
       image: News_2,
@@ -53,7 +53,7 @@ const News = () => {
 
   return (
     <div className="container py-28 m-auto news">
-      <h2 className="text-6xl text-[#8f1537] font-bold text-center">
+      <h2 className="text-6xl text-mainColor font-bold text-center">
         NEWS & Announcement
       </h2>
       <div className="flex gap-5 mx-auto my-16">
