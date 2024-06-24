@@ -17,12 +17,12 @@ const Activities = () => {
                 alt="activity 1"
                 className="w-full h-60"
               />
-              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-mainColor">
+              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
                 free
               </p>
               <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
-                <span className="text-3xl font-bold text-mainColor">20</span>
-                <span className="font-bold text-mainColor">May</span>
+                <span className="text-3xl font-bold text-secondColor">20</span>
+                <span className="font-bold text-secondColor">May</span>
               </p>
             </div>
             <div className="px-4 py-12 text-white bg-mainColor rounded-b-3xl">
@@ -43,12 +43,12 @@ const Activities = () => {
                 alt="activity 1"
                 className="w-full h-60"
               />
-              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-mainColor">
+              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
                 free
               </p>
               <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
-                <span className="text-3xl font-bold text-mainColor">20</span>
-                <span className="font-bold text-mainColor">May</span>
+                <span className="text-3xl font-bold text-secondColor">20</span>
+                <span className="font-bold text-secondColor">May</span>
               </p>
             </div>
             <div className="px-4 py-12 text-white bg-mainColor rounded-b-3xl">
@@ -69,12 +69,12 @@ const Activities = () => {
                 alt="activity 1"
                 className="w-full h-60"
               />
-              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-mainColor">
+              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
                 free
               </p>
               <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
-                <span className="text-3xl font-bold text-mainColor">20</span>
-                <span className="font-bold text-mainColor">May</span>
+                <span className="text-3xl font-bold text-secondColor">20</span>
+                <span className="font-bold text-secondColor">May</span>
               </p>
             </div>
             <div className="px-4 py-12 text-white bg-mainColor rounded-b-3xl">
@@ -95,12 +95,12 @@ const Activities = () => {
                 alt="activity 1"
                 className="w-full h-60"
               />
-              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-mainColor">
+              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
                 free
               </p>
               <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
-                <span className="text-3xl font-bold text-mainColor">20</span>
-                <span className="font-bold text-mainColor">May</span>
+                <span className="text-3xl font-bold text-secondColor">20</span>
+                <span className="font-bold text-secondColor">May</span>
               </p>
             </div>
             <div className="px-4 py-12 text-white bg-mainColor rounded-b-3xl">
@@ -121,12 +121,12 @@ const Activities = () => {
                 alt="activity 1"
                 className="w-full h-60"
               />
-              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-mainColor">
+              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
                 free
               </p>
               <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
-                <span className="text-3xl font-bold text-mainColor">20</span>
-                <span className="font-bold text-mainColor">May</span>
+                <span className="text-3xl font-bold text-secondColor">20</span>
+                <span className="font-bold text-secondColor">May</span>
               </p>
             </div>
             <div className="px-4 py-12 text-white bg-mainColor rounded-b-3xl">
@@ -147,12 +147,12 @@ const Activities = () => {
                 alt="activity 1"
                 className="w-full h-60"
               />
-              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-mainColor">
+              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
                 free
               </p>
               <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
-                <span className="text-3xl font-bold text-mainColor">20</span>
-                <span className="font-bold text-mainColor">May</span>
+                <span className="text-3xl font-bold text-secondColor">20</span>
+                <span className="font-bold text-secondColor">May</span>
               </p>
             </div>
             <div className="px-4 py-12 text-white bg-mainColor rounded-b-3xl">
@@ -173,12 +173,12 @@ const Activities = () => {
                 alt="activity 1"
                 className="w-full h-60"
               />
-              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-mainColor">
+              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
                 free
               </p>
               <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
-                <span className="text-3xl font-bold text-mainColor">20</span>
-                <span className="font-bold text-mainColor">May</span>
+                <span className="text-3xl font-bold text-secondColor">20</span>
+                <span className="font-bold text-secondColor">May</span>
               </p>
             </div>
             <div className="px-4 py-12 text-white bg-mainColor rounded-b-3xl">
@@ -199,12 +199,12 @@ const Activities = () => {
                 alt="activity 1"
                 className="w-full h-60"
               />
-              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-mainColor">
+              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
                 free
               </p>
               <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
-                <span className="text-3xl font-bold text-mainColor">20</span>
-                <span className="font-bold text-mainColor">May</span>
+                <span className="text-3xl font-bold text-secondColor">20</span>
+                <span className="font-bold text-secondColor">May</span>
               </p>
             </div>
             <div className="px-4 py-12 text-white bg-mainColor rounded-b-3xl">
@@ -225,12 +225,12 @@ const Activities = () => {
                 alt="activity 1"
                 className="w-full h-60"
               />
-              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-mainColor">
+              <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
                 free
               </p>
               <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
-                <span className="text-3xl font-bold text-mainColor">20</span>
-                <span className="font-bold text-mainColor">May</span>
+                <span className="text-3xl font-bold text-secondColor">20</span>
+                <span className="font-bold text-secondColor">May</span>
               </p>
             </div>
             <div className="px-4 py-12 text-white bg-mainColor rounded-b-3xl">

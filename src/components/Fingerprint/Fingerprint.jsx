@@ -4,13 +4,13 @@ import FingerImg from "../../assets/fingerPrint/student.jpg";
 const Fingerprint = () => {
   return (
     <div
-      className="container mx-auto py-16"
+      className="container py-16 mx-auto"
       data-aos="fade-up"
       ata-aos-duration="2000"
     >
       <div className="flex items-center justify-between w-full">
         <div className="w-[60%] relative z-50">
-          <h2 className="text-3xl font-semibold text-[#8f1537]">
+          <h2 className="text-3xl font-semibold text-mainColor">
             ALJAZARI'S WAY{" "}
           </h2>
           <p className="text-xl text-[#244b5a] my-10">
