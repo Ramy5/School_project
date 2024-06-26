@@ -2,7 +2,7 @@
 .slider_arrows_rightside {
   display: inline;
   position: absolute;
-  top: 50%;
+  top: 40%;
   z-index: 2;
   cursor: pointer;
 }
@@ -17,7 +17,7 @@
   transform: rotate(270deg);
   right: 130px;
   left: auto;
-  top: 60%;
+  top: 48%;
 }
 
 .slider_arrows {

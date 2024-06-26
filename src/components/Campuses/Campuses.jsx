@@ -107,7 +107,7 @@ const Campuses = () => {
   });
 
   return (
-    <div ref={secondSectionRef} className="h-[110vh]">
+    <div ref={secondSectionRef} className="h-[120vh] mt-40">
       <div className="relative w-full h-full">
         <div
           className={`${
@@ -132,7 +132,7 @@ const Campuses = () => {
           ))}
         </div>
         <div
-          className="campuses_image h-full"
+          className="h-full campuses_image"
           style={{
             clipPath: `circle(${clipScroll}px at center)`,
           }}
@@ -149,11 +149,11 @@ const Campuses = () => {
                       <img
                         src={item.image}
                         alt={`Image ${index + 1}`}
-                        className="h-full w-full"
+                        className="w-full h-full"
                       />
-                      <div className="absolute top-1/2 md:top-3/4 left-1/4 md:left-1/2 -translate-y-1/2 md:-translate-x-1/2 w-full text-center text-white">
+                      <div className="absolute w-full text-center text-white -translate-y-1/2 top-1/2 md:top-3/4 left-1/4 md:left-1/2 md:-translate-x-1/2">
                         <h2 className="text-3xl font-semibold">{item.title}</h2>
-                        <p className="text-2xl my-3"> {item.desc} </p>
+                        <p className="my-3 text-2xl"> {item.desc} </p>
                         <span className="text-lg font-semibold">
                           {" "}
                           {item.branch}{" "}

@@ -12,13 +12,13 @@ const LandingPage = ({ title }) => {
   const locationPath = location.pathname;
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full">
       <div className="absolute top-0 left-0 w-full">
         <Header />
         <Nav />
       </div>
       {locationPath === "/" ? (
-        <main className="w-full">
+        <main className="w-full h-screen">
           <Swiper
             grabCursor={true}
             effect={"creative"}
@@ -41,7 +41,7 @@ const LandingPage = ({ title }) => {
           >
             <SwiperSlide>
               <video
-                style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+                style={{ width: "100%", height: "130vh", objectFit: "cover" }}
                 autoPlay
                 muted
                 loop
