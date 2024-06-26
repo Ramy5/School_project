@@ -44,11 +44,7 @@ const Nav = () => {
 
       {/** CENTER */}
       <div className="flex justify-center transition-all duration-700 -translate-y-10 nav_center">
-        <img
-          src={navLogo}
-          alt="nav logo"
-          className="-translate-y-4 w-36 h-36"
-        />
+        <img src={navLogo} alt="nav logo" className="w-24 -translate-y-4" />
       </div>
 
       {/** RIGHT SIDE */}
