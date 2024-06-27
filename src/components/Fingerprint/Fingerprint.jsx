@@ -10,9 +10,7 @@ const Fingerprint = () => {
     >
       <div className="flex items-center justify-between w-full">
         <div className="w-[60%] relative z-50">
-          <h2 className="text-3xl font-semibold text-mainColor">
-            ALJAZARI'S WAY{" "}
-          </h2>
+          <h2 className="text-3xl font-semibold text-mainColor">ELITE WAY </h2>
           <p className="text-xl text-[#244b5a] my-10">
             Aljazari International Schools, which laid the foundations of a
             unique educational system with original steps in the journey of

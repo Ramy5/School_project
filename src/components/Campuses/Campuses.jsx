@@ -100,7 +100,7 @@ const Campuses = () => {
     },
   ];
 
-  const text = "AJLAZARISCHOOLS•    ";
+  const text = "E L I T E A C A D E M Y        ";
 
   const parallax = useParallax({
     rotate: [0, 360],
