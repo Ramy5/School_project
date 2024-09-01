@@ -49,7 +49,7 @@ body {
 }
 
 .campuses_image {
-  background-image: url(./assets/campuses/00.jpg);
+  background-image: url(./assets/campuses/00.png);
   background-size: cover;
   background-position: center;
   /* clip-path: circle(5% at center); */

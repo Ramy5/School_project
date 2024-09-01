@@ -57,7 +57,7 @@ const LandingPage = ({ title }) => {
   ];
 
   return (
-    <div className="relative w-full h-full">
+    <div className="relative w-full">
       <div className="absolute top-0 left-0 w-full">
         <Header />
         <Nav />
@@ -78,6 +78,7 @@ const LandingPage = ({ title }) => {
             </h2>
           </div>
         </div>
+
       ) : (
         <div>{title}</div>
       )}
