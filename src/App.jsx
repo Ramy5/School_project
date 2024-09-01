@@ -19,6 +19,14 @@ import { Fragment } from "react";
 import { About } from "./pages";
 import { ParallaxProvider } from "react-scroll-parallax";
 import Graduates from "./components/Home/Graduates/Graduates";
+import MessageSchool from "./components/MessageSchool/MessageSchool";
+import OurProcess from "./components/OurProcess/OurProcess";
+import EliteStudio from "./components/EliteStudio/EliteStudio";
+import EliteGraduates from "./components/EliteGraduates/EliteGraduates";
+import NewsAnnouncement from "./components/NewsAnnouncement/NewsAnnouncement";
+import CampusLife from "./components/CampusLife/CampusLife";
+import Testimonials from "./components/Testimonials/Testimonials";
+import Footer from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -31,16 +39,18 @@ function App() {
               <Fragment>
                 <LandingPage />
                 <Campuses />
+                <MessageSchool />
+                <OurProcess />
                 <ApplicationForm />
-                <Fingerprint />
-                <EducationalCurriculum />
-                <Activities />
                 <SchoolType />
-                <GeneralManager />
-                <Graduates />
-                <KinderGarten />
-                <News />
+                <EliteStudio />
+                <Activities />
+                <EliteGraduates />
+                <NewsAnnouncement />
+                <CampusLife />
                 <Accreditations />
+                <Testimonials />
+                <Footer />
               </Fragment>
             }
           />

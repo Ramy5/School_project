@@ -1,3 +1,30 @@
+@media (min-width: 1238px) {
+  .header_left-side {
+    padding-right: 170px !important;
+    padding-left: 80px !important;
+  }
+  .header_left-side p,
+  .header_right-side p {
+    font-size: 14px !important;
+  }
+  .header_right-side {
+    padding-left: 170px !important;
+    padding-right: 80px !important;
+  }
+  .nav_left-side {
+    padding-right: 170px !important;
+  }
+  .nav_right-side {
+    padding-left: 170px !important;
+  }
+  .sideBar_left_side {
+    padding-inline-start: 5rem !important;
+  }
+  .sideBar_right_side {
+    padding-inline-end: 5rem !important;
+  }
+}
+
 .slider_arrows_leftside,
 .slider_arrows_rightside {
   display: inline;

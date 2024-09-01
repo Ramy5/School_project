@@ -25,6 +25,12 @@ body {
   border: 2px solid #f0f0f0;
 }
 
+@layer components {
+  .main_shadow {
+    box-shadow: inset 0px 8px 42px 0 #00000017;
+  }
+}
+
 @layer base {
   .main__head {
     @apply text-[60px] font-bold mb-10 text-center text-mainColor uppercase;
@@ -32,6 +38,13 @@ body {
 
   .main__section-padding {
     @apply px-12 py-14;
+  }
+}
+
+@media (min-width: 1238px) {
+  .container_section {
+    padding-right: 5rem !important;
+    padding-left: 5rem !important;
   }
 }
 
