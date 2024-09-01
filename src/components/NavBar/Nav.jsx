@@ -1,8 +1,11 @@
 import navShapeRight from "../../assets/nav/shape-right.svg";
 import navShapeLeft from "../../assets/nav/shape-left.svg";
-import navLogo from "../../assets/nav/nav-logo.png";
+import navLogo from "../../assets/nav/nav-logo.svg";
 import "./navBarIcon.css";
 import { useEffect } from "react";
+import { IoSearch } from "react-icons/io5";
+import shapeLeftImg from "../../assets/header/shape-left.png";
+import shapeRightImg from "../../assets/header/shape-right.png";
 
 const Nav = () => {
   useEffect(() => {
@@ -28,37 +31,42 @@ const Nav = () => {
   }, []);
 
   return (
-    <nav className="fixed nav top-[43px] z-40 grid grid-cols-3 w-full">
+    <nav className="fixed nav top-0 lg:top-16 z-40 grid grid-cols-12 w-full">
       {/** LEFT SIDE */}
-      <div className="relative transition-all duration-700 ease-in-out nav_left-side">
+      <div className="relative col-span-5 h-[70px] lg:h-fit flex items-center transition-all duration-700 ease-in-out nav_left-side">
         <img
-          src={navShapeLeft}
-          alt="nav shape"
-          className="-mt-[5.5px] w-96 absolute top-0 left-0 inline-block -z-10"
+          src={shapeLeftImg}
+          alt="shape left"
+          className="absolute top-0 left-0 h-[70px] inline-block lg:hidden w-full -z-10"
         />
 
-        <p className="w-full px-24 mt-1 text-2xl font-bold text-white cursor-pointer">
-          Join Us
-        </p>
+        <div className="flex gap-6 ps-12 lg:ps-16 mb-1 lg:mb-0 sideBar_left_side">
+          <button className="bg-mainColor py-0 lg:py-2 px-0 lg:px-4 text-white rounded-md font-semibold text-base">
+            APPLY NOW
+          </button>
+          <button className="text-white font-semibold text-base">EN</button>
+        </div>
       </div>
 
       {/** CENTER */}
-      <div className="flex justify-center transition-all duration-700 -translate-y-10 nav_center">
-        <img src={navLogo} alt="nav logo" className="w-36 h-36" />
+      <div className="m-auto col-span-2 transition-all duration-700 -translate-y-10 nav_center mt-12 lg:mt-0">
+        <img src={navLogo} alt="nav logo" className="w-32 lg:w-36 h-32 lg:h-36" />
       </div>
 
       {/** RIGHT SIDE */}
-      <div className="relative transition-all duration-700 nav_right-side">
+      <div className="relative col-span-5 transition-all h-[60px] lg:h-fit flex items-center duration-700 nav_right-side">
         <img
-          src={navShapeRight}
-          alt="nav shape"
-          className="-mt-[5.5px] w-96 absolute top-0 right-0 inline-block -z-10"
+          src={shapeRightImg}
+          alt="shape left"
+          className="absolute top-0 left-0 h-[60px] inline-block lg:hidden w-full -z-10 "
         />
 
-        <div className="flex items-center justify-end w-full gap-16 pr-12">
-          <p className="mt-1 text-2xl font-bold text-white cursor-pointer">
+        <div className="flex items-center justify-end w-full gap-6 lg:gap-10 pe-12 lg:pe-16 sideBar_right_side">
+          <p className="mt-1 text-lg font-semibold text-white cursor-pointer">
             About Us
           </p>
+
+          <IoSearch size={28} fill="white" />
 
           <div>
             <input type="checkbox" id="checkbox" />

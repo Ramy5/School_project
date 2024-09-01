@@ -6,11 +6,13 @@ import {
   FaTwitter,
   FaWhatsapp,
 } from "react-icons/fa";
-import { IoSearch } from "react-icons/io5";
+import { IoLocationSharp, IoSearch } from "react-icons/io5";
 import { TfiYoutube } from "react-icons/tfi";
-import shapeLeftImg from "../../assets/header/shape-left.svg";
-import shapeRightImg from "../../assets/header/shape-right.svg";
+import shapeLeftImg from "../../assets/header/shape-left.png";
+import shapeRightImg from "../../assets/header/shape-right.png";
 import { useEffect } from "react";
+import { MdEmail } from "react-icons/md";
+import { FiPhone } from "react-icons/fi";
 
 const Header = () => {
   useEffect(() => {
@@ -32,97 +34,95 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 z-50 grid items-center justify-center w-full grid-cols-2 header">
+    <header className="fixed top-0 z-50 lg:grid items-center justify-center w-full grid-cols-2 header h-12 hidden">
       {/** LEFT SIDE */}
-      <div className="relative flex items-start justify-between h-full py-2 pl-24 pr-48 text-white transition-all duration-700 header_left-side">
+      <div className="relative flex items-center justify-between h-12 pl-16 pr-20 text-white transition-all duration-700 header_left-side">
         <img
           src={shapeLeftImg}
           alt="shape left"
-          className="absolute top-0 left-0 inline-block w-full -z-10"
+          className="absolute top-0 left-0 h-[54px] inline-block w-full -z-10"
         />
 
-        <div className="flex items-center gap-3">
-          <div className="relative group">
-            <FaFacebookF
-              size={20}
-              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
-            />
-            <FaFacebookF
-              size={20}
-              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
-            />
-          </div>
-          <div className="relative group">
-            <FaTwitter
-              size={20}
-              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
-            />
-            <FaTwitter
-              size={20}
-              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
-            />
-          </div>
-
-          <div className="relative group">
-            <FaInstagram
-              size={20}
-              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
-            />
-            <FaInstagram
-              size={20}
-              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
-            />
-          </div>
-
-          <div className="relative group">
-            <TfiYoutube
-              size={20}
-              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
-            />
-            <TfiYoutube
-              size={20}
-              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
-            />
-          </div>
-
-          <div className="relative group">
-            <FaLinkedin
-              size={20}
-              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
-            />
-            <FaLinkedin
-              size={20}
-              className="cursor-pointer text-[#D69929] absolute top-0 left-0 opacity-0 transition-opacity group-hover:opacity-100"
-            />
-          </div>
+        <div className="flex items-center gap-1">
+          <IoLocationSharp size={18} />
+          <p className="text-xs font-medium">
+            Namık Kemal, Haramidere Yolu, 34513
+          </p>
         </div>
 
-        <p className="flex cursor-pointer items-center gap-3 border-2 border-[#3CB09D] rounded-full  px-2">
-          <FaWhatsapp />
-          <span>Whatsapp</span>
-        </p>
-
-        <p className="flex items-center gap-2">
-          <FaPhoneAlt />
-          <span>+1234566778</span>
+        <p className="flex items-center gap-1">
+          <FiPhone size={18} />
+          <p className="text-xs font-medium ">+90 544 447 30 30</p>
         </p>
       </div>
 
       {/** RIGHT SIDE */}
-      <div className="relative flex items-start h-full py-2 pl-48 pr-24 text-white transition-all duration-700 header_right-side">
+      <div className="relative flex items-center justify-between h-12 pl-24 pr-16 text-white transition-all duration-700 header_right-side">
         <img
           src={shapeRightImg}
           alt="shape left"
-          className="absolute top-0 left-0 inline-block w-full -z-10"
+          className="absolute top-0 left-0 h-12 inline-block w-full -z-10"
         />
-        <div className="flex items-center justify-between w-full">
-          <button
-            type="button"
-            className="bg-[#3CB] px-4 py-[2px] uppercase rounded-full font-bold text-sm hover:text-[#3CB] transition-all duration-300 hover:bg-white"
-          >
-            apply now
-          </button>
-          <IoSearch size={20} className="cursor-pointer" />
+
+        <div className="flex items-center gap-2">
+          <MdEmail size={18} />
+          <p className="text-xs font-medium ">info@eliteacademy.school</p>
+        </div>
+
+        <div className="flex items-center gap-2">
+          <div className="relative group bg-[#00A6C5] p-1 rounded-sm">
+            <FaFacebookF
+              size={16}
+              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
+            />
+            <FaFacebookF
+              size={16}
+              className="cursor-pointer text-[#D69929] absolute top-1 left-1 opacity-0 transition-opacity group-hover:opacity-100"
+            />
+          </div>
+          <div className="relative group bg-[#00A6C5] p-1 rounded-sm">
+            <FaTwitter
+              size={16}
+              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
+            />
+            <FaTwitter
+              size={16}
+              className="cursor-pointer text-[#D69929] absolute top-1 left-1 opacity-0 transition-opacity group-hover:opacity-100"
+            />
+          </div>
+
+          <div className="relative group bg-[#00A6C5] p-1 rounded-sm">
+            <FaInstagram
+              size={16}
+              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
+            />
+            <FaInstagram
+              size={16}
+              className="cursor-pointer text-[#D69929] absolute top-1 left-1 opacity-0 transition-opacity group-hover:opacity-100"
+            />
+          </div>
+
+          <div className="relative group bg-[#00A6C5] p-1 rounded-sm">
+            <TfiYoutube
+              size={16}
+              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
+            />
+            <TfiYoutube
+              size={16}
+              className="cursor-pointer text-[#D69929] absolute top-1 left-1 opacity-0 transition-opacity group-hover:opacity-100"
+            />
+          </div>
+
+          <div className="relative group bg-[#00A6C5] p-1 rounded-sm">
+            <FaLinkedin
+              size={16}
+              className="transition-transform transform cursor-pointer group-hover:-translate-y-8"
+            />
+            <FaLinkedin
+              size={16}
+              className="cursor-pointer text-[#D69929] absolute top-1 left-1 opacity-0 transition-opacity group-hover:opacity-100"
+            />
+          </div>
         </div>
       </div>
     </header>
