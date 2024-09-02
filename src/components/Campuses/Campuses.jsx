@@ -93,7 +93,7 @@ const Campuses = () => {
   });
 
   return (
-    <div ref={secondSectionRef} className="h-[120vh] mt-40">
+    <div ref={secondSectionRef} className="h-[120vh]">
       <div className="relative w-full h-full">
         <div
           className={`${
@@ -130,7 +130,7 @@ const Campuses = () => {
                   return (
                     <div
                       key={index}
-                      className={`camp-${index} relative h-1/4 md:h-full cursor-pointer campuse_animation !duration-500 !transition-all w-full md:w-1/4 hover:w-[30%]`}
+                      className={`camp-${index} relative h-1/4 md:h-full cursor-pointer campuse_animation !duration-500 !transition-all w-full md:w-1/4 md:hover:w-[30%]`}
                     >
                       <img
                         src={item.image}

@@ -21,7 +21,7 @@ const ApplicationForm = () => {
 
   return (
     <section className="container_section px-4 sm:px-16" data-aos="fade-up">
-      <h2 className="main__head">Application Form</h2>
+      <h2 className="main__head text-2xl sm:text-3xl md:text-4xl lg:text-5xl">Application Form</h2>
 
       <Formik
         initialValues={initialValues}

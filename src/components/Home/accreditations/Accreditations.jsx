@@ -30,15 +30,17 @@ const Accreditations = () => {
 
   return (
     <section className="my-16" data-aos="fade-up">
-      <h2 className="text-center text-mainColor font-semibold text-5xl mb-5">
-        ACCREDITATIONS
-      </h2>
-      <p data-aos="fade-up" className="text-center mb-20 text-2xl leading-9">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br />{" "}
-        eiusmod tempor incididunt ut labore et dolore magna aliqua
-      </p>
+      <div className="my-16 mx-4 sm:mx-20">
+        <h2 className="text-center text-mainColor font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-5 ">
+          ACCREDITATIONS
+        </h2>
+        <p data-aos="fade-up" className="text-center mb-20 text-lg md:text-xl xl:text-2xl leading-9">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br />{" "}
+          eiusmod tempor incididunt ut labore et dolore magna aliqua
+        </p>
+      </div>
 
-      <div className="grid justify-center md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid justify-center sm:grid-cols-2 md:grid-cols-4">
         {AccreditationsData &&
           AccreditationsData.map((item, index) => (
             <div

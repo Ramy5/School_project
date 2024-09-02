@@ -5,11 +5,18 @@ import NewsAnnouncement_1 from "../../assets/NewsAnnouncement/NewsAnnouncement_1
 import NewsAnnouncement_2 from "../../assets/NewsAnnouncement/NewsAnnouncement_2.svg";
 import NewsAnnouncement_3 from "../../assets/NewsAnnouncement/NewsAnnouncement_3.svg";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import Aos from "aos";
 
 const NewsAnnouncement = () => {
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
 
   const NewsAnnouncementData = [
     {
@@ -75,9 +82,9 @@ const NewsAnnouncement = () => {
     }
   }, []);
   return (
-    <div className=" my-16 mx:0 sm:mx-20">
-      <div className="text-center">
-        <h2 className="text-4xl font-semibold text-mainColor mb-3">
+    <div className="my-16 mx:40 sm:mx-20">
+      <div className="text-center mx-4 sm:mx-20" data-aos="zoom-in-down">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-mainColor mb-3">
           News & Announcement
         </h2>
         <p className="text-[#0009] mb-6">
@@ -85,7 +92,7 @@ const NewsAnnouncement = () => {
           eiusmod tempor incididunt ut labore et dolore magna aliqua
         </p>
       </div>
-      <div>
+      <div data-aos="zoom-in-up">
         <Swiper
           spaceBetween={35}
           slidesPerView={3}
