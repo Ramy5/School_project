@@ -7,7 +7,7 @@ import { IoSearch } from "react-icons/io5";
 import shapeLeftImg from "../../assets/header/shape-left.png";
 import shapeRightImg from "../../assets/header/shape-right.png";
 
-const Nav = () => {
+const Nav = ({ setDropdownNavBar }) => {
   useEffect(() => {
     window.addEventListener("scroll", () => {
       const navLeftSide = document.querySelector(".nav_left-side");
@@ -30,6 +30,10 @@ const Nav = () => {
     });
   }, []);
 
+  const handleCheckboxChange = (event) => {
+    setDropdownNavBar(event.target.checked);
+  };
+
   return (
     <nav className="fixed nav top-0 lg:top-16 z-40 grid grid-cols-12 w-full">
       {/** LEFT SIDE */}
@@ -40,8 +44,8 @@ const Nav = () => {
           className="absolute top-0 left-0 h-[70px] inline-block lg:hidden w-full -z-10"
         />
 
-        <div className="flex gap-6 ps-12 lg:ps-16 mb-1 lg:mb-0 sideBar_left_side">
-          <button className="bg-mainColor py-0 lg:py-2 px-0 lg:px-4 text-white rounded-md font-semibold text-base">
+        <div className="flex gap-6 ps-6 md:ps-12 lg:ps-16 mb-1 lg:mb-0 sideBar_left_side">
+          <button className="bg-transparent lg:bg-mainColor py-0 lg:py-2 px-0 lg:px-4 text-white rounded-md font-medium sm:font-semibold text-base">
             APPLY NOW
           </button>
           <button className="text-white font-semibold text-base">EN</button>
@@ -50,7 +54,11 @@ const Nav = () => {
 
       {/** CENTER */}
       <div className="m-auto col-span-2 transition-all duration-700 -translate-y-10 nav_center mt-12 lg:mt-0">
-        <img src={navLogo} alt="nav logo" className="w-32 lg:w-36 h-32 lg:h-36" />
+        <img
+          src={navLogo}
+          alt="nav logo"
+          className="w-32 lg:w-36 h-32 lg:h-36"
+        />
       </div>
 
       {/** RIGHT SIDE */}
@@ -61,15 +69,19 @@ const Nav = () => {
           className="absolute top-0 left-0 h-[60px] inline-block lg:hidden w-full -z-10 "
         />
 
-        <div className="flex items-center justify-end w-full gap-6 lg:gap-10 pe-12 lg:pe-16 sideBar_right_side">
-          <p className="mt-1 text-lg font-semibold text-white cursor-pointer">
+        <div className="flex items-center justify-end w-full gap-6 lg:gap-10 pe-6 sm:pe-12 lg:pe-16 sideBar_right_side">
+          <p className="mt-1 text-lg font-semibold text-white cursor-pointer hidden md:block">
             About Us
           </p>
 
           <IoSearch size={28} fill="white" />
 
           <div>
-            <input type="checkbox" id="checkbox" />
+            <input
+              type="checkbox"
+              id="checkbox"
+              onChange={handleCheckboxChange}
+            />
             <label htmlFor="checkbox" className="toggle">
               <div className="bar bar--top"></div>
               <div className="bar bar--middle"></div>

@@ -14,11 +14,15 @@ import "./HomeArrowsSlidesAnimation.css";
 import "swiper/css/navigation";
 import { useEffect, useState } from "react";
 import { BiParagraph } from "react-icons/bi";
+import DropDownNavBar from "../DropDownNavBar/DropDownNavBar";
 
 const LandingPage = ({ title }) => {
   const locationPath = location.pathname;
 
   const [currentIndex, setCurrentIndex] = useState(0);
+
+  const [dropdownNavBar, setDropdownNavBar] = useState(false)
+  console.log("🚀 ~ LandingPage ~ dropdownNavBar:", dropdownNavBar)
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -60,7 +64,10 @@ const LandingPage = ({ title }) => {
     <div className="relative w-full">
       <div className="absolute top-0 left-0 w-full">
         <Header />
-        <Nav />
+        <Nav setDropdownNavBar={setDropdownNavBar}/>
+      </div>
+      <div>
+        <DropDownNavBar dropdownNavBar={dropdownNavBar} setDropdownNavBar={setDropdownNavBar} />
       </div>
       {locationPath === "/" ? (
         <div className="text-center relative">
@@ -69,7 +76,7 @@ const LandingPage = ({ title }) => {
             alt={`Slide ${currentIndex + 1}`}
             className="w-full h-screen transition-opacity duration-500 ease-in-out inline-block"
           />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-50">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-40">
             <p className="text-mainColor font-medium text-xl mb-2">
               {imagesAndContent[currentIndex].title}
             </p>
