@@ -15,14 +15,15 @@ import "swiper/css/navigation";
 import { useEffect, useState } from "react";
 import { BiParagraph } from "react-icons/bi";
 import DropDownNavBar from "../DropDownNavBar/DropDownNavBar";
+import { Link } from "react-router-dom";
 
-const LandingPage = ({ title }) => {
+const LandingPage = ({ content, title, subTitle, image }) => {
   const locationPath = location.pathname;
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const [dropdownNavBar, setDropdownNavBar] = useState(false)
-  console.log("🚀 ~ LandingPage ~ dropdownNavBar:", dropdownNavBar)
+  const [dropdownNavBar, setDropdownNavBar] = useState(false);
+  console.log("🚀 ~ LandingPage ~ dropdownNavBar:", dropdownNavBar);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -64,10 +65,13 @@ const LandingPage = ({ title }) => {
     <div className="relative w-full">
       <div className="absolute top-0 left-0 w-full">
         <Header />
-        <Nav setDropdownNavBar={setDropdownNavBar}/>
+        <Nav setDropdownNavBar={setDropdownNavBar} />
       </div>
       <div>
-        <DropDownNavBar dropdownNavBar={dropdownNavBar} setDropdownNavBar={setDropdownNavBar} />
+        <DropDownNavBar
+          dropdownNavBar={dropdownNavBar}
+          setDropdownNavBar={setDropdownNavBar}
+        />
       </div>
       {locationPath === "/" ? (
         <div className="text-center relative">
@@ -76,18 +80,36 @@ const LandingPage = ({ title }) => {
             alt={`Slide ${currentIndex + 1}`}
             className="w-full h-screen transition-opacity duration-500 ease-in-out inline-block"
           />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-40">
-            <p className="text-mainColor font-medium text-xl mb-2">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-40 w-[80%] sm:w-[60%] md:w-[55%] lg:w-[50%]">
+            <p className="text-mainColor font-medium text-xl mb-4">
               {imagesAndContent[currentIndex].title}
             </p>
-            <h2 className="text-[#EBECF0] font-bold text-5xl">
+            <h2 className="text-[#EBECF0] font-bold text-xl sm:text-3xl md:text-4xl lg:text-5xl">
               {imagesAndContent[currentIndex].content}
             </h2>
           </div>
         </div>
-
       ) : (
-        <div>{title}</div>
+        <div className="">
+          <img
+            src={image}
+            alt={title}
+            className="w-full h-screen transition-opacity duration-500 ease-in-out inline-block"
+          />
+          <div className="absolute w-max top-1/2 -translate-y-1/2 text-center md:text-right mx-20">
+            <h2 className="font-bold text-4xl text-white mb-4">{title}</h2>
+            <ul className="flex gap-2 text-white justify-center md:justify-start">
+              <li className="text-white font-bold cursor-pointer">
+                <Link to="/">Home</Link>
+              </li>
+              <li>|</li>
+              <li className="text-white rounded-xl font-bold cursor-pointer">
+                {title}
+              </li>
+            </ul>
+          </div>
+          {content}
+        </div>
       )}
     </div>
   );

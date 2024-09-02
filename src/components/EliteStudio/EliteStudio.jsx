@@ -6,11 +6,18 @@ import EliteStudio_2 from "../../assets/EliteStudio/EliteStudio_2.svg";
 import EliteStudio_3 from "../../assets/EliteStudio/EliteStudio_3.svg";
 import EliteStudio_4 from "../../assets/EliteStudio/EliteStudio_4.svg";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import Aos from "aos";
 
 const EliteStudio = () => {
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+
+  useEffect(() => {
+    Aos.init({
+      duration: 1000,
+    });
+  }, []);
 
   const EliteStudioData = [
     {
@@ -63,10 +70,12 @@ const EliteStudio = () => {
   return (
     <div className="my-24 mx:0 sm:mx-20">
       <div>
-        <div className="mb-10 flex justify-between items-center !mx-4 sm:mx-0">
+        <div className="mb-10 flex justify-between items-center !mx-4 sm:mx-0" data-aos="zoom-in-down">
           <div className="">
             <h2 className="font-semibold text-mainColor">Elite Studio</h2>
-            <p className="text-3xl mt-1">Elite Studio Podcast</p>
+            <p className="text-xl md:text-2xl xl:text-3xl mt-1">
+              Elite Studio Podcast
+            </p>
           </div>
           <div className="flex items-center gap-5 relative z-50">
             <button
@@ -89,44 +98,46 @@ const EliteStudio = () => {
             </button>
           </div>
         </div>
-        <Swiper
-          spaceBetween={20}
-          slidesPerView={4}
-          breakpoints={{
-            320: {
-              slidesPerView: 1,
-            },
-            520: {
-              slidesPerView: 2,
-            },
-            768: {
-              slidesPerView: 3,
-            },
-            1024: {
-              slidesPerView: 4,
-            },
-          }}
-          onSwiper={(swiper) => {
-            swiperRef.current = swiper;
-            setIsBeginning(swiper.isBeginning);
-            setIsEnd(swiper.isEnd);
-          }}
-        >
-          {EliteStudioData &&
-            EliteStudioData.map((item, index) => (
-              <SwiperSlide key={index}>
-                <div className="relative">
-                  <img src={item.image} alt={item.name} className="w-full" />
-                  <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-center text-white">
-                    <h2 className="font-semibold text-2xl uppercase whitespace-nowrap">
-                      {item.name}
-                    </h2>
-                    <p className="whitespace-nowrap">{item.position_title}</p>
+        <div data-aos="zoom-in-up">
+          <Swiper
+            spaceBetween={20}
+            slidesPerView={4}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              520: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 4,
+              },
+            }}
+            onSwiper={(swiper) => {
+              swiperRef.current = swiper;
+              setIsBeginning(swiper.isBeginning);
+              setIsEnd(swiper.isEnd);
+            }}
+          >
+            {EliteStudioData &&
+              EliteStudioData.map((item, index) => (
+                <SwiperSlide key={index}>
+                  <div className="relative">
+                    <img src={item.image} alt={item.name} className="w-full" />
+                    <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-center text-white">
+                      <h2 className="font-semibold text-2xl uppercase whitespace-nowrap">
+                        {item.name}
+                      </h2>
+                      <p className="whitespace-nowrap">{item.position_title}</p>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
-        </Swiper>
+                </SwiperSlide>
+              ))}
+          </Swiper>
+        </div>
       </div>
     </div>
   );

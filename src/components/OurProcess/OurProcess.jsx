@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import StudentSchool_img from "../../assets/OurProccess/student-school.png";
 import Star_img from "../../assets/OurProccess/star.png";
 import Step_1 from "../../assets/OurProccess/step_1.png";
@@ -7,8 +7,14 @@ import Step_3 from "../../assets/OurProccess/step_3.png";
 import Step_4 from "../../assets/OurProccess/step_4.png";
 import DashUp from "../../assets/OurProccess/dashUp.png";
 import DashDown from "../../assets/OurProccess/dashDown.png";
+import Aos from "aos";
 
 const OurProcess = () => {
+  useEffect(() => {
+    Aos.init({
+      duration: 500,
+    });
+  }, []);
   const processSteps = [
     {
       index: 1,
@@ -45,9 +51,10 @@ const OurProcess = () => {
             src={StudentSchool_img}
             alt="MessageSchool"
             className="w-[415px] h-[400px]"
+            data-aos="zoom-out"
           />
           <div className="absolute w-[315px] -top-[15px] -left-[80px] right-0 -z-10">
-            <img src={Star_img} alt="MessageSchool" />
+            <img src={Star_img} alt="MessageSchool" data-aos="zoom-in" />
           </div>
         </div>
         <div className="-mt-12 md:text-start text-center">
@@ -57,7 +64,7 @@ const OurProcess = () => {
           </h4>
           <div className="flex flex-col lg:flex-row space-x-8 mt-12">
             <div className="flex flex-col sm:flex-row m-0">
-              <div className="flex items-center h-fit !m-0 ">
+              <div className="flex items-center h-fit !m-0 " data-aos="fade-up">
                 <div className="text-center">
                   <img
                     src={Step_4}
@@ -73,7 +80,7 @@ const OurProcess = () => {
                 </div>
               </div>
               <img src={DashDown} alt="DashDown" className="h-11 mt-20 hidden sm:block" />
-              <div className="flex items-center h-fit mt-10 sm:mt-24">
+              <div className="flex items-center h-fit mt-10 sm:mt-24" data-aos="fade-down">
                 <div className="text-center">
                   <img
                     src={Step_3}
@@ -95,7 +102,7 @@ const OurProcess = () => {
               className="h-11 w-20 lg:w-auto !mx-auto lg:mb-24 mb-0 lg:mt-20 mt-0 rotate-180 lg:rotate-0 hidden sm:block"
             />
             <div className="flex flex-col sm:flex-row !ms-0">
-              <div className="flex items-center h-fit !m-0 !mt-10 sm:mt-0">
+              <div className="flex items-center h-fit !m-0 !mt-10 sm:mt-0" data-aos="fade-up">
                 <div className="text-center">
                   <img
                     src={Step_2}
@@ -111,7 +118,7 @@ const OurProcess = () => {
                 </div>
               </div>
               <img src={DashDown} alt="DashDown" className="h-11 mt-20 hidden sm:block" />
-              <div className="flex items-center h-fit mt-10 sm:mt-24">
+              <div className="flex items-center h-fit mt-10 sm:mt-24" data-aos="fade-down">
                 <div className="text-center">
                   <img
                     src={Step_1}

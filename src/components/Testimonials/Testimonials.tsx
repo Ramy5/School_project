@@ -70,7 +70,7 @@ const Testimonials = () => {
     }
   }, []);
   return (
-    <div className="container_section my-20">
+    <div className="container_section mt-20 mb-32">
       <div className="text-center">
         <p className="text-mainColor font-medium">Testimonials</p>
         <h2 className="text-xl">What Parents Say about Elite school</h2>
@@ -85,39 +85,40 @@ const Testimonials = () => {
             setIsBeginning(swiper.isBeginning);
             setIsEnd(swiper.isEnd);
           }}
+          className="overflow-visible"
         >
           {TestimonialsData &&
             TestimonialsData.map((item, index) => (
               <SwiperSlide key={index}>
-                <div className="mt-8 px-4 md:px-12 lg:px-40 min-h-[420px]">
+                <div className="mt-8 px-4 md:px-12 lg:px-40">
                   <div className="relative">
-                    <img src={Testimonials_1} alt="Testimonials" />
+                    <img src={Testimonials_1} alt="Testimonials" className="w-11 md:w-20" />
                     <div className="flex gap-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                      <FaStar size={30} className="fill-[#FE8D4D]" />
-                      <FaStar size={30} className="fill-[#FE8D4D]" />
-                      <FaStar size={30} className="fill-[#FE8D4D]" />
-                      <FaStar size={30} className="fill-[#FE8D4D]" />
-                      <FaStar size={30} className="fill-[#FE8D4D]" />
+                      <FaStar className="fill-[#FE8D4D] w-6 h-6 md:w-8 md:h-8" />
+                      <FaStar className="fill-[#FE8D4D] w-6 h-6 md:w-8 md:h-8" />
+                      <FaStar className="fill-[#FE8D4D] w-6 h-6 md:w-8 md:h-8" />
+                      <FaStar className="fill-[#FE8D4D] w-6 h-6 md:w-8 md:h-8" />
+                      <FaStar className="fill-[#FE8D4D] w-6 h-6 md:w-8 md:h-8" />
                     </div>
                   </div>
-                  <p className="text-[#363848] px-24 text-center">
+                  <p className="text-[#363848] px-4 sm:px-8 md:px-24 py-2 text-center">
                     {item.desc}
                   </p>
                   <div className="relative">
                     <img
                       src={Testimonials_2}
                       alt="Testimonials"
-                      className="ml-auto"
+                      className="ml-auto w-11 md:w-20"
                     />
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-20">
+                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-14 md:mt-20">
                       <img
                         src={item.image}
                         alt="Testimonials"
                         className="m-auto"
                       />
                       <div className="text-center w-fit">
-                        <h2>{item.name}</h2>
-                        <p>{item.type}</p>
+                        <h2 className="text-base md:text-lg">{item.name}</h2>
+                        <p className="text-sm md:text-base">{item.type}</p>
                       </div>
                     </div>
                   </div>
@@ -125,7 +126,7 @@ const Testimonials = () => {
               </SwiperSlide>
             ))}
         </Swiper>
-        <div className="mb-10 mt-8 flex justify-center items-center">
+        <div className="mt-36 flex justify-center items-center">
           <div className="flex items-center gap-5">
             <button
               onClick={handlePrev}
