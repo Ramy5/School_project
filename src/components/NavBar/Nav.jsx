@@ -148,7 +148,7 @@ const Nav = ({ setDropdownNavBar }) => {
         <img
           src={shapeLeftImg}
           alt="shape left"
-          className="absolute top-0 left-0 h-[70px] inline-block lg:hidden w-full -z-10"
+          className="absolute top-0 left-0 h-[70px] inline-block lg:hidden w-full -z-10 max-w-full"
         />
 
         <div className="flex gap-6 ps-3 md:ps-12 lg:ps-16 mb-1 lg:mb-0 sideBar_left_side">
@@ -172,7 +172,7 @@ const Nav = ({ setDropdownNavBar }) => {
         <img
           src={shapeRightImg}
           alt="shape left"
-          className="absolute top-0 left-0 h-[60px] inline-block lg:hidden w-full -z-10 "
+          className="absolute top-0 left-0 h-[60px] inline-block lg:hidden w-full -z-10 max-w-full"
         />
 
         <div className="flex items-center justify-end w-full gap-6 lg:gap-10 pe-3 sm:pe-12 lg:pe-16 sideBar_right_side">
