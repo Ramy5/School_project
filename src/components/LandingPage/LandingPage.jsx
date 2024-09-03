@@ -71,7 +71,7 @@ const LandingPage = ({ content, title, subTitle, image }) => {
       <div>
         <DropDownNavBar
           dropdownNavBar={dropdownNavBar}
-          setDropdownNavBar={setDropdownNavBar}
+          setDropdownNavBar={setDropdownNavBar}    
         />
       </div>
       {locationPath === "/" ? (
