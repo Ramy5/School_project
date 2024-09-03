@@ -36,7 +36,7 @@ const CampusLife = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-5 sm:mx-20 overflow-x-hidden">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-5 sm:mx-20 overflow-hidden">
       <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-8" data-aos="zoom-out-right">
         <div className="">
           <p className="font-medium text-mainColor border-b-2 border-mainColor w-fit pb-1">
@@ -62,7 +62,7 @@ const CampusLife = () => {
           />
         </div>
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-8 mt-4 lg:mt-0" data-aos="zoom-out-left">
+      <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-8 mt-4 lg:mt-0 overflow-y-hidden" data-aos="zoom-out-right">
         {CampusLifeData &&
           CampusLifeData.map((item, index) => (
             <div key={index} className="grid grid-cols-1 lg:grid-cols-9 gap-5 mb-5.5">

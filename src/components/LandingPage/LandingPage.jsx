@@ -26,13 +26,13 @@ const LandingPage = ({ content, title, subTitle, image }) => {
   const [dropdownNavBar, setDropdownNavBar] = useState(false);
   console.log("🚀 ~ LandingPage ~ dropdownNavBar:", dropdownNavBar);
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesAndContent.length);
-  //   }, 2000);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesAndContent.length);
+    }, 2000);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+    return () => clearInterval(interval);
+  }, []);
 
   const imagesAndContent = [
     {
