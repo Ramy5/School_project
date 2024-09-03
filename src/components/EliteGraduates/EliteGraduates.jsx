@@ -1,14 +1,14 @@
 import React, { useEffect } from "react";
-import EliteGraduates_1 from "../../assets/EliteGraduates/EliteGraduates_1.svg";
-import EliteGraduates_2 from "../../assets/EliteGraduates/EliteGraduates_2.svg";
-import EliteGraduates_3 from "../../assets/EliteGraduates/EliteGraduates_3.svg";
-import EliteGraduates_4 from "../../assets/EliteGraduates/EliteGraduates_4.svg";
-import EliteGraduates_5 from "../../assets/EliteGraduates/EliteGraduates_5.svg";
-import EliteGraduates_6 from "../../assets/EliteGraduates/EliteGraduates_6.svg";
-import EliteGraduates_7 from "../../assets/EliteGraduates/EliteGraduates_7.svg";
+import EliteGraduates_1 from "../../assets/EliteGraduates/EliteGraduates_1.png";
+import EliteGraduates_2 from "../../assets/EliteGraduates/EliteGraduates_2.png";
+import EliteGraduates_3 from "../../assets/EliteGraduates/EliteGraduates_3.png";
+import EliteGraduates_4 from "../../assets/EliteGraduates/EliteGraduates_4.png";
+import EliteGraduates_5 from "../../assets/EliteGraduates/EliteGraduates_5.png";
+import EliteGraduates_6 from "../../assets/EliteGraduates/EliteGraduates_6.png";
+import EliteGraduates_7 from "../../assets/EliteGraduates/EliteGraduates_7.png";
 import EliteGraduates_8 from "../../assets/EliteGraduates/EliteGraduates_8.svg";
-import EliteGraduates_9 from "../../assets/EliteGraduates/EliteGraduates_9.svg";
-import EliteGraduates_10 from "../../assets/EliteGraduates/EliteGraduates_10.svg";
+import EliteGraduates_9 from "../../assets/EliteGraduates/EliteGraduates_9.png";
+import EliteGraduates_10 from "../../assets/EliteGraduates/EliteGraduates_10.png";
 import { useLocation } from "react-router-dom";
 import Aos from "aos";
 
@@ -51,7 +51,7 @@ const EliteGraduates = () => {
           </div>
         </div>
       </div>
-      <div className="text-center mb-4 gap-3 md:flex hidden">
+      <div className="text-center mb-4 gap-3 md:flex justify-between hidden">
         <div data-aos="zoom-in-right">
           <img
             src={EliteGraduates_1}
