@@ -11,7 +11,7 @@ const MessageSchool = () => {
     });
   }, []);
   return (
-    <div className="container_section px-4 sm:px-16 my-32">
+    <div className="container_section px-4 sm:px-16 my-32 overflow-x-hidden">
       <div className="grid grid-cols-1 lg:grid-cols-10 items-center">
         <div className="relative h-[450px] col-span-3" data-aos="fade-right">
           <div className="absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 -z-10 ms-36 hidden md:block">

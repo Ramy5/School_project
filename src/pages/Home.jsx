@@ -5,7 +5,14 @@ import "swiper/css/effect-creative";
 import "swiper/css/navigation";
 
 import { EffectCreative, Autoplay, Navigation } from "swiper/modules";
-import { Accreditations, Activities, ApplicationForm, Campuses, LandingPage, SchoolType } from "../components";
+import {
+  Accreditations,
+  Activities,
+  ApplicationForm,
+  Campuses,
+  LandingPage,
+  SchoolType,
+} from "../components";
 import MessageSchool from "../components/MessageSchool/MessageSchool";
 import OurProcess from "../components/OurProcess/OurProcess";
 import EliteStudio from "../components/EliteStudio/EliteStudio";
@@ -36,6 +43,7 @@ const Home = () => {
 };
 
 export default Home;
+
 
 // <main className="absolute top-0 bottom-0 left-0 right-0">
 // <Swiper
