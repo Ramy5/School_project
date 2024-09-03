@@ -54,10 +54,12 @@ const Activities = () => {
       </h2>
 
       <div className="relative mx:0 sm:mx-20 mb-40 cursor-pointer">
-        <div
-          className="absolute -translate-x-1/2 bg-gray-100 h-[37rem] w-[45rem] rounded-xl top-[-4rem] left-1/2"
-          data-aos="zoom-in-down"
-        ></div>
+        <div className="flex justify-center">
+          <div
+            className="absolute -translate-x-1/2 bg-gray-100 h-[37rem] w-full sm:w-3/4 rounded-xl top-[-4rem]"
+            data-aos="zoom-in-down"
+          ></div>
+        </div>
 
         <div data-aos="zoom-in-up">
           <Swiper
