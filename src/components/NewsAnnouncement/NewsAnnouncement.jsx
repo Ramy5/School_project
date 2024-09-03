@@ -1,9 +1,9 @@
 import React, { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import NewsAnnouncement_1 from "../../assets/NewsAnnouncement/NewsAnnouncement_1.svg";
-import NewsAnnouncement_2 from "../../assets/NewsAnnouncement/NewsAnnouncement_2.svg";
-import NewsAnnouncement_3 from "../../assets/NewsAnnouncement/NewsAnnouncement_3.svg";
+import NewsAnnouncement_1 from "../../assets/NewsAnnouncement/NewsAnnouncement_1.png";
+import NewsAnnouncement_2 from "../../assets/NewsAnnouncement/NewsAnnouncement_2.png";
+import NewsAnnouncement_3 from "../../assets/NewsAnnouncement/NewsAnnouncement_3.png";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import Aos from "aos";
 

@@ -37,7 +37,7 @@ const SchoolType = () => {
               <img
                 src={item.image}
                 alt={`Image ${index + 1}`}
-                className="h-full w-full bg-cover bg-center"
+                className="h-full w-full bg-cover bg-center object-cover"
               />
               <div className="absolute top-1/2 md:top-3/4 left-1/4 md:left-1/2 -translate-y-1/2 md:-translate-x-1/2 w-full text-center text-white">
                 <h2 className="text-xl font-semibold lg:text-3xl">{item.title}</h2>

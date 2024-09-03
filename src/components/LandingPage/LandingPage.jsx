@@ -21,6 +21,7 @@ const LandingPage = ({ content, title, subTitle, image }) => {
   const locationPath = location.pathname;
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   const [dropdownNavBar, setDropdownNavBar] = useState(false);
   console.log("🚀 ~ LandingPage ~ dropdownNavBar:", dropdownNavBar);
@@ -78,7 +79,7 @@ const LandingPage = ({ content, title, subTitle, image }) => {
           <img
             src={imagesAndContent[currentIndex].imageSrc}
             alt={`Slide ${currentIndex + 1}`}
-            className="w-full h-screen transition-opacity duration-500 ease-in-out inline-block"
+            className="w-full h-screen transition-opacity duration-500 ease-in-out inline-block object-cover"
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-40 w-[80%] sm:w-[60%] md:w-[55%] lg:w-[50%]">
             <p className="text-mainColor font-medium text-xl mb-4">
@@ -91,11 +92,16 @@ const LandingPage = ({ content, title, subTitle, image }) => {
         </div>
       ) : (
         <div className="">
-          <img
-            src={image}
-            alt={title}
-            className="w-full h-screen transition-opacity duration-500 ease-in-out inline-block"
-          />
+          <div>
+            <img
+              src={image}
+              alt={title}
+              className={`w-full h-full max-w-full transition-opacity duration-500 ease-in-out inline-block bg-cover bg-center object-contain ${
+                isLoaded ? "opacity-100" : "opacity-0"
+              }`}
+              onLoad={() => setIsLoaded(true)}
+            />
+          </div>
           <div className="absolute w-max top-1/2 -translate-y-1/2 text-center md:text-right mx-20">
             <h2 className="font-bold text-4xl text-white mb-4">{title}</h2>
             <ul className="flex gap-2 text-white justify-center md:justify-start">

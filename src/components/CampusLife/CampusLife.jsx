@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import CampusLife_1 from "../../assets/CampusLife/CampusLife_1.svg";
-import CampusLife_2 from "../../assets/CampusLife/CampusLife_2.svg";
-import CampusLife_3 from "../../assets/CampusLife/CampusLife_3.svg";
-import CampusLife_4 from "../../assets/CampusLife/CampusLife_4.svg";
-import CampusLife_5 from "../../assets/CampusLife/CampusLife_5.svg";
+import CampusLife_1 from "../../assets/CampusLife/CampusLife_1.png";
+import CampusLife_2 from "../../assets/CampusLife/CampusLife_2.png";
+import CampusLife_3 from "../../assets/CampusLife/CampusLife_3.png";
+import CampusLife_4 from "../../assets/CampusLife/CampusLife_4.png";
+import CampusLife_5 from "../../assets/CampusLife/CampusLife_5.png";
 import { FaChevronRight } from "react-icons/fa6";
 import Aos from "aos";
 
@@ -64,8 +64,8 @@ const CampusLife = () => {
       </div>
       <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-8 mt-4 lg:mt-0" data-aos="zoom-out-left">
         {CampusLifeData &&
-          CampusLifeData.map((item) => (
-            <div className="grid grid-cols-1 lg:grid-cols-9 gap-5 mb-5.5">
+          CampusLifeData.map((item, index) => (
+            <div key={index} className="grid grid-cols-1 lg:grid-cols-9 gap-5 mb-5.5">
               <div className="col-span-full md:col-span-5">
                 <img
                   src={item.image}
