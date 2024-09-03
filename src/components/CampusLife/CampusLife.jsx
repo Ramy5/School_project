@@ -36,7 +36,7 @@ const CampusLife = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-5 sm:mx-20 ">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 mx-5 sm:mx-20 overflow-x-hidden">
       <div className="grid md:grid-cols-2 lg:grid-cols-1 gap-8" data-aos="zoom-out-right">
         <div className="">
           <p className="font-medium text-mainColor border-b-2 border-mainColor w-fit pb-1">

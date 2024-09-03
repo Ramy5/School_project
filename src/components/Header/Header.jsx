@@ -34,7 +34,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header className="fixed top-0 z-50 lg:grid items-center justify-center w-full grid-cols-2 header h-12 hidden">
+    <header className="fixed top-0 left-0 z-50 lg:grid items-center justify-center w-full grid-cols-2 header h-12 hidden">
       {/** LEFT SIDE */}
       <div className="relative flex items-center justify-between h-12 pl-16 pr-20 text-white transition-all duration-700 header_left-side">
         <img

@@ -22,7 +22,7 @@ const EliteGraduates = () => {
   const locationPath = location.pathname;
 
   return (
-    <div className="bg-white p-4 md:p-8 container_section">
+    <div className="bg-white p-4 md:p-8 container_section overflow-x-hidden">
       <div>
         <div className="md:hidden block text-center mb-12">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-6xl font-bold text-mainColor my-5 ">
