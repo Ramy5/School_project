@@ -13,9 +13,14 @@ const SpellingBee = lazy(() => import("./pages/SpellingBee"));
 const MunParticipation = lazy(() => import("./pages/MunParticipation"));
 const RoboticsContest = lazy(() => import("./pages/RoboticsContest"));
 const Curriclum = lazy(() => import("./pages/Curriclum"));
+const ExtracurricularActivities = lazy(() =>
+  import("./pages/ExtracurricularActivities")
+);
+const DualDiploma = lazy(() => import("./pages/DualDiploma"));
+const CareerPath = lazy(() => import("./pages/CareerPath"));
+const StemPage = lazy(() => import("./pages/StemPage"));
 
 function App() {
-
   return (
     <ParallaxProvider>
       <BrowserRouter>
@@ -93,6 +98,44 @@ function App() {
                 </Fragment>
               }
             />
+            <Route
+              path="/extracurricular"
+              element={
+                <Fragment>
+                  <ExtracurricularActivities />
+                  <Footer />
+                </Fragment>
+              }
+            />
+            <Route
+              path="/dual_Diploma"
+              element={
+                <Fragment>
+                  <DualDiploma />
+                  <Footer />
+                </Fragment>
+              }
+            />
+
+            <Route
+              path="/Career_Path"
+              element={
+                <Fragment>
+                  <CareerPath />
+                  <Footer />
+                </Fragment>
+              }
+            />
+
+            <Route
+            path="/stem"
+            element={
+              <Fragment>
+                <StemPage />
+                <Footer />
+              </Fragment>
+            }
+          />
           </Routes>
         </LoadingWrapper>
       </BrowserRouter>

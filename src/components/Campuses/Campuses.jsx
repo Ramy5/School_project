@@ -201,7 +201,6 @@ const Campuses = () => {
     },
   ];
 
-
   useEffect(() => {
     Aos.init({ duration: 1000 });
 
@@ -215,33 +214,72 @@ const Campuses = () => {
 
   return (
     <div
-      className="h-screen overflow-hidden"
+      className="h-full overflow-hidden grid grid-cols-1 md:grid-cols-2"
       id="campus-section"
     >
-      <div className="flex flex-col md:flex-row w-full h-full ">
-        {campusesData &&
-          campusesData.map((item, index) => {
-            return (
-              <div
-                key={index}
-                // data-aos="fade-down"
-                data-aos-delay={index * 250}
-                data-aos={!isSmallScreen ? "fade-up" : "fade-right"}
-                className={`relative h-1/4 md:h-full cursor-pointer !duration-500 !transition-all w-full md:w-1/4 md:hover:w-[30%]`}
-              >
-                <img
-                  src={item.image}
-                  alt={`Image ${index + 1}`}
-                  className="h-full w-full bg-cover bg-center object-cover "
-                />
-                <div className="absolute w-full text-center text-white -translate-y-1/2 top-1/2 md:top-3/4 left-1/4 md:left-1/2 md:-translate-x-1/2">
-                  <h2 className="text-3xl font-semibold">{item.title}</h2>
-                  <p className="my-3 text-2xl"> {item.desc} </p>
-                  <span className="text-lg font-semibold"> {item.branch} </span>
-                </div>
-              </div>
-            );
-          })}
+      <div className="grid grid-cols-1 sm:grid-cols-2 h-1/2">
+        <div
+          data-aos-delay={0}
+          data-aos={!isSmallScreen ? "fade-up" : "fade-right"}
+          className={`relative md:h-full cursor-pointer !duration-500 !transition-all w-full`}
+        >
+          <img
+            src={Campuses_1}
+            alt="Campuses_1"
+            className="h-full w-full bg-cover bg-center duration-300 transform md:hover:scale-105"
+          />
+          <div className="absolute w-full text-center text-white -translate-y-1/2 top-[80%] left-1/2 -translate-x-1/2">
+            <h2 className="text-3xl font-semibold">Elite Academy</h2>
+            <p className="my-3 text-2xl"> For KG stage </p>
+          </div>
+        </div>
+        <div
+          data-aos-delay={250}
+          data-aos={!isSmallScreen ? "fade-up" : "fade-right"}
+          className={`relative md:h-full cursor-pointer !duration-500 !transition-all w-full`}
+        >
+          <img
+            src={Campuses_2}
+            alt="Campuses_1"
+            className="h-full w-full bg-cover bg-center duration-300 transform md:hover:scale-105"
+          />
+          <div className="absolute w-full text-center text-white -translate-y-1/2 top-[80%] left-1/2 -translate-x-1/2">
+            <h2 className="text-3xl font-semibold">Elite Academy</h2>
+            <p className="my-3 text-2xl"> For KG stage </p>
+          </div>
+        </div>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 h-1/2">
+        <div
+          data-aos-delay={0}
+          data-aos={!isSmallScreen ? "fade-up" : "fade-right"}
+          className={`relative md:h-full cursor-pointer !duration-500 !transition-all w-full`}
+        >
+          <img
+            src={Campuses_3}
+            alt="Campuses_1"
+            className="h-full w-full bg-cover bg-center duration-300 transform md:hover:scale-105"
+          />
+          <div className="absolute w-full text-center text-white -translate-y-1/2 top-[80%] left-1/2 -translate-x-1/2">
+            <h2 className="text-3xl font-semibold">Elite Academy</h2>
+            <p className="my-3 text-2xl"> For KG stage </p>
+          </div>
+        </div>
+        <div
+          data-aos-delay={250}
+          data-aos={!isSmallScreen ? "fade-up" : "fade-right"}
+          className={`relative md:h-full cursor-pointer !duration-500 !transition-all w-full`}
+        >
+          <img
+            src={Campuses_4}
+            alt="Campuses_1"
+            className="h-full w-full bg-cover bg-center duration-300 transform md:hover:scale-105"
+          />
+          <div className="absolute w-full text-center text-white -translate-y-1/2 top-[80%] left-1/2 -translate-x-1/2">
+            <h2 className="text-3xl font-semibold">Elite Academy</h2>
+            <p className="my-3 text-2xl"> For KG stage </p>
+          </div>
+        </div>
       </div>
     </div>
   );

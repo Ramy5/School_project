@@ -12,7 +12,7 @@ const SpellingBee = () => {
           <h2 className="font-semibold text-2xl mb-4">Spelling Bee</h2>
 
           <div className="my-16">
-            <div className="grid grid-cols-2 gap-x-32 gap-y-5">
+            <div className="grid md:grid-cols-2 gap-x-20 lg:gap-x-28 gap-y-5">
               <p
                 className="text-xl mb-4 text-[#0009]"
                 style={{ lineHeight: "1.8" }}

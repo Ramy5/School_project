@@ -94,7 +94,6 @@
 
 // // <button className="text-white font-semibold text-base">EN</button>
 
-
 import { useEffect } from "react";
 import navShapeRight from "../../assets/nav/shape-right.svg";
 import navShapeLeft from "../../assets/nav/shape-left.svg";
@@ -105,6 +104,7 @@ import shapeLeftImg from "../../assets/header/shape-left.png";
 import shapeRightImg from "../../assets/header/shape-right.png";
 import { HiMiniBars3 } from "react-icons/hi2";
 import throttle from "lodash/throttle";
+import { Link } from "react-router-dom";
 
 const Nav = ({ setDropdownNavBar }) => {
   useEffect(() => {
@@ -113,10 +113,12 @@ const Nav = ({ setDropdownNavBar }) => {
       const navRightSide = document.querySelector(".nav_right-side");
       const navCenter = document.querySelector(".nav_center");
       const nav = document.querySelector(".nav");
+      const logoImg = document.querySelector(".logo_img");
 
       const scrollPosition = window.scrollY;
 
       if (scrollPosition > 70) {
+        logoImg.style.marginTop = "-32px";
         navLeftSide.style.transform = "translateX(-100%)";
         navRightSide.style.transform = "translateX(100%)";
         navCenter.style.transform = "translateY(-20rem)";
@@ -128,7 +130,7 @@ const Nav = ({ setDropdownNavBar }) => {
         navRightSide.style.transform = "translateX(0)";
         navCenter.style.transform = "translateY(0)";
       }
-    }, 100); // Throttled for better performance on mobile
+    }, 100);
 
     window.addEventListener("scroll", handleScroll);
 
@@ -160,11 +162,13 @@ const Nav = ({ setDropdownNavBar }) => {
 
       {/* CENTER */}
       <div className="m-auto col-span-2 transition-all duration-700 -translate-y-10 nav_center mt-12 lg:mt-0">
-        <img
-          src={navLogo}
-          alt="nav logo"
-          className="w-32 lg:w-36 h-32 lg:h-36 -mt-8"
-        />
+        <Link to="/">
+          <img
+            src={navLogo}
+            alt="nav logo"
+            className="w-32 lg:w-36 h-32 lg:h-36 logo_img"
+          />
+        </Link>
       </div>
 
       {/* RIGHT SIDE */}
@@ -176,17 +180,16 @@ const Nav = ({ setDropdownNavBar }) => {
         />
 
         <div className="flex items-center justify-end w-full gap-6 lg:gap-10 pe-3 sm:pe-12 lg:pe-16 sideBar_right_side">
-          <p className="mt-1 text-lg font-semibold text-white cursor-pointer hidden md:block">
-            About Us
-          </p>
+          <Link to="about">
+            <p className="mt-1 text-lg font-semibold text-white cursor-pointer hidden md:block">
+              About Us
+            </p>
+          </Link>
 
           <IoSearch size={28} fill="white" />
 
           <div>
-            <button
-              className="cursor-pointer"
-              onClick={handleOpenNavBar}
-            >
+            <button className="cursor-pointer" onClick={handleOpenNavBar}>
               <HiMiniBars3 size={40} className="text-white" />
             </button>
           </div>
@@ -197,4 +200,3 @@ const Nav = ({ setDropdownNavBar }) => {
 };
 
 export default Nav;
-

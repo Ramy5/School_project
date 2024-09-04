@@ -7,7 +7,7 @@ const About = () => {
   return (
     <Fragment>
       <LandingPage title="About As" image={Landing_bg_4} />
-      <div className="mx-20">
+      <div className="mx-8 md:mx-20">
         <div className="my-16">
           <h2 className="font-semibold text-2xl mb-4">
             Brief History of Elite Academy
@@ -33,7 +33,7 @@ const About = () => {
 
         <div className="my-12">
           <h2 className="font-semibold text-2xl mb-4">Our Recipe</h2>
-          <div className="flex gap-20">
+          <div className="flex flex-col-reverse md:flex-row gap-8 md:gap-20">
             <p className="text-xl mb-4 text-[#0009]">
               At Elite International Academy, our philosophy of education is
               akin to lighting a fire rather than simply filling a bucket. We
