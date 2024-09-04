@@ -7,7 +7,7 @@ const ExtracurricularActivities = () => {
   return (
     <Fragment>
       <LandingPage title="Extracurricular Activities" image={Landing_bg_4} />
-      <div className="mx-8 md:mx-20">
+      <div className="mx-8 md:mx-20 text-center sm:text-start">
         <div className="my-16">
           <h2 className="font-semibold text-2xl mb-4">Extracurriculars</h2>
           <p className="text-xl mb-4 text-[#0009]">

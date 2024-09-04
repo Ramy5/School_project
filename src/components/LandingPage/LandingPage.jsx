@@ -34,11 +34,11 @@ const LandingPage = ({ content, title, subTitle, image }) => {
   }, []);
 
   const imagesAndContent = [
-    {
-      imageSrc: Landing_bg_1,
-      title: "Elite Academy International School",
-      content: "The New Turkish International school, For Primary & Secondary.",
-    },
+    // {
+    //   imageSrc: Landing_bg_1,
+    //   title: "Elite Academy International School",
+    //   content: "The New Turkish International school, For Primary & Secondary.",
+    // },
     {
       imageSrc: Landing_bg_2,
       title: "Elite Academy International School",
@@ -54,11 +54,11 @@ const LandingPage = ({ content, title, subTitle, image }) => {
       title: "Elite Academy International School",
       content: "The New Turkish International school, For Primary & Secondary.",
     },
-    {
-      imageSrc: Landing_bg_5,
-      title: "Elite Academy International School",
-      content: "The New Turkish International school, For Primary & Secondary.",
-    },
+    // {
+    //   imageSrc: Landing_bg_5,
+    //   title: "Elite Academy International School",
+    //   content: "The New Turkish International school, For Primary & Secondary.",
+    // },
   ];
 
   return (

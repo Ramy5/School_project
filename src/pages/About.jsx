@@ -6,8 +6,8 @@ import Landing_bg_4 from "../assets/landingPage/landing_bg_4.png";
 const About = () => {
   return (
     <Fragment>
-      <LandingPage title="About As" image={Landing_bg_4} />
-      <div className="mx-8 md:mx-20">
+      <LandingPage title="About Us" image={Landing_bg_4} />
+      <div className="mx-8 md:mx-20 text-center sm:text-start">
         <div className="my-16">
           <h2 className="font-semibold text-2xl mb-4">
             Brief History of Elite Academy

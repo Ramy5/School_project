@@ -245,7 +245,7 @@ const Campuses = () => {
           />
           <div className="absolute w-full text-center text-white -translate-y-1/2 top-[80%] left-1/2 -translate-x-1/2">
             <h2 className="text-3xl font-semibold">Elite Academy</h2>
-            <p className="my-3 text-2xl"> For KG stage </p>
+            <p className="my-3 text-2xl"> Elementary School </p>
           </div>
         </div>
       </div>
@@ -262,7 +262,7 @@ const Campuses = () => {
           />
           <div className="absolute w-full text-center text-white -translate-y-1/2 top-[80%] left-1/2 -translate-x-1/2">
             <h2 className="text-3xl font-semibold">Elite Academy</h2>
-            <p className="my-3 text-2xl"> For KG stage </p>
+            <p className="my-3 text-2xl"> ⁠Middle School </p>
           </div>
         </div>
         <div
@@ -277,7 +277,7 @@ const Campuses = () => {
           />
           <div className="absolute w-full text-center text-white -translate-y-1/2 top-[80%] left-1/2 -translate-x-1/2">
             <h2 className="text-3xl font-semibold">Elite Academy</h2>
-            <p className="my-3 text-2xl"> For KG stage </p>
+            <p className="my-3 text-2xl"> High School </p>
           </div>
         </div>
       </div>

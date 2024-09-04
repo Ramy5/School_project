@@ -19,6 +19,11 @@ const ExtracurricularActivities = lazy(() =>
 const DualDiploma = lazy(() => import("./pages/DualDiploma"));
 const CareerPath = lazy(() => import("./pages/CareerPath"));
 const StemPage = lazy(() => import("./pages/StemPage"));
+const InternationalDay = lazy(() => import("./pages/InternationalDay"));
+const CommunityService = lazy(() => import("./pages/CommunityService"));
+const Events = lazy(() => import("./pages/Events"));
+const ApplicationFormPage = lazy(() => import("./pages/ApplicationFormPage"));
+const ContactUs = lazy(() => import("./pages/ContactUs"));
 
 function App() {
   return (
@@ -128,14 +133,64 @@ function App() {
             />
 
             <Route
-            path="/stem"
-            element={
-              <Fragment>
-                <StemPage />
-                <Footer />
-              </Fragment>
-            }
-          />
+              path="/stem"
+              element={
+                <Fragment>
+                  <StemPage />
+                  <Footer />
+                </Fragment>
+              }
+            />
+
+            <Route
+              path="/international_day"
+              element={
+                <Fragment>
+                  <InternationalDay />
+                  <Footer />
+                </Fragment>
+              }
+            />
+
+            <Route
+              path="/community_service"
+              element={
+                <Fragment>
+                  <CommunityService />
+                  <Footer />
+                </Fragment>
+              }
+            />
+
+            <Route
+              path="/events"
+              element={
+                <Fragment>
+                  <Events />
+                  <Footer />
+                </Fragment>
+              }
+            />
+
+            <Route
+              path="/Application_Form"
+              element={
+                <Fragment>
+                  <ApplicationFormPage />
+                  <Footer />
+                </Fragment>
+              }
+            />
+
+            <Route
+              path="/Contact_Us"
+              element={
+                <Fragment>
+                  <ContactUs />
+                  <Footer />
+                </Fragment>
+              }
+            />
           </Routes>
         </LoadingWrapper>
       </BrowserRouter>
