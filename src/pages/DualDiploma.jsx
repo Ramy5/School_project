@@ -7,7 +7,7 @@ const DualDiploma = () => {
   return (
     <Fragment>
       <LandingPage title="Dual Diploma" image={Landing_bg_4} />
-      <div className="mx-8 md:mx-20">
+      <div className="mx-8 md:mx-20 text-center sm:text-start">
         <div className="my-16">
           <h2 className="font-semibold text-2xl mb-4">Double the Achievement</h2>
           <div className="flex flex-col lg:flex-row gap-12 mb-48">

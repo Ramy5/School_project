@@ -18,11 +18,18 @@ const LoadingWrapper = ({ children }) => {
     "/extracurricular": "Extracurricular Activities",
     "/CareerPath": "Career Path",
     "/stem": "Stem",
+    "/international_day": "International Day",
+    "/community_service": "Community Service",
+    "/events": "Events",
+    "/Application_Form": "ApplicationForm",
+    "/Contact_Us": "Contact Us",
   };
 
   const pageName = pageNames[location.pathname] || "Page";
 
-  return <Suspense fallback={<Loading pageName={pageName} />}>{children}</Suspense>;
+  return (
+    <Suspense fallback={<Loading pageName={pageName} />}>{children}</Suspense>
+  );
 };
 
 export default LoadingWrapper;

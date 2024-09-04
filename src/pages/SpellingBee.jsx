@@ -7,7 +7,7 @@ const SpellingBee = () => {
     <div>
       <LandingPage title="Spelling Bee" image={Landing_bg_1} />
 
-      <div className="mx-6 md:mx-12 lg:mx-20">
+      <div className="mx-6 md:mx-12 lg:mx-20 text-center sm:text-start">
         <div className="my-16">
           <h2 className="font-semibold text-2xl mb-4">Spelling Bee</h2>
 
