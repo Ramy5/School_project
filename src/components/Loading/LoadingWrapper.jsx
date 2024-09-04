@@ -15,6 +15,9 @@ const LoadingWrapper = ({ children }) => {
     "/MUN": "MUN Participation",
     "/robotics": "Robotics Contest",
     "/curriclum": "Curriculum",
+    "/extracurricular": "Extracurricular Activities",
+    "/CareerPath": "Career Path",
+    "/stem": "Stem",
   };
 
   const pageName = pageNames[location.pathname] || "Page";

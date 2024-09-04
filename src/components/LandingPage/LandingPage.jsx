@@ -24,7 +24,6 @@ const LandingPage = ({ content, title, subTitle, image }) => {
   const [isLoaded, setIsLoaded] = useState(false);
 
   const [dropdownNavBar, setDropdownNavBar] = useState(false);
-  console.log("🚀 ~ LandingPage ~ dropdownNavBar:", dropdownNavBar);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -37,28 +36,28 @@ const LandingPage = ({ content, title, subTitle, image }) => {
   const imagesAndContent = [
     {
       imageSrc: Landing_bg_1,
-      title: "Welcome to Elite school,",
-      content: "The New Turkish International school, For Primary & Secondary.",
+      title: "Elite Academy International School",
+      content: "The New Turkish International school, For Primary & Secondary.",
     },
     {
       imageSrc: Landing_bg_2,
-      title: "Welcome to Elite school,",
-      content: "We are determined to Shaping Future Leaders",
+      title: "Elite Academy International School",
+      content: "The New Turkish International school, For Primary & Secondary.",
     },
     {
       imageSrc: Landing_bg_3,
-      title: "Welcome to Elite school,",
-      content: "The New Turkish International school, For Primary & Secondary.",
+      title: "Elite Academy International School",
+      content: "The New Turkish International school, For Primary & Secondary.",
     },
     {
       imageSrc: Landing_bg_4,
-      title: "Welcome to Elite school,",
-      content: "The New Turkish International school, For Primary & Secondary.",
+      title: "Elite Academy International School",
+      content: "The New Turkish International school, For Primary & Secondary.",
     },
     {
       imageSrc: Landing_bg_5,
-      title: "Welcome to Elite school,",
-      content: "The New Turkish International school, For Primary & Secondary.",
+      title: "Elite Academy International School",
+      content: "The New Turkish International school, For Primary & Secondary.",
     },
   ];
 
@@ -80,6 +79,7 @@ const LandingPage = ({ content, title, subTitle, image }) => {
             src={imagesAndContent[currentIndex].imageSrc}
             alt={`Slide ${currentIndex + 1}`}
             className="w-full h-screen transition-opacity duration-500 ease-in-out inline-block object-cover"
+            onLoad={() => setIsLoaded(true)}
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-40 w-[80%] sm:w-[60%] md:w-[55%] lg:w-[50%]">
             <p className="text-mainColor font-medium text-xl mb-4">
@@ -96,13 +96,13 @@ const LandingPage = ({ content, title, subTitle, image }) => {
             <img
               src={image}
               alt={title}
-              className={`w-full h-full max-w-full transition-opacity duration-500 ease-in-out inline-block bg-cover bg-center object-contain ${
+              className={`w-full h-[600px]  md:h-full max-w-full transition-opacity duration-500 ease-in-out inline-block bg-cover bg-center object-cover ${
                 isLoaded ? "opacity-100" : "opacity-0"
               }`}
               onLoad={() => setIsLoaded(true)}
             />
           </div>
-          <div className="absolute w-max top-1/2 -translate-y-1/2 text-center md:text-right mx-20">
+          <div className="absolute w-max top-1/2 -translate-y-1/2 text-center md:text-right left-1/2 md:left-0 -translate-x-1/2 md:-translate-x-0  mt-12 mx-0 md:mx-20">
             <h2 className="font-bold text-4xl text-white mb-4">{title}</h2>
             <ul className="flex gap-2 text-white justify-center md:justify-start">
               <li className="text-white font-bold cursor-pointer">
