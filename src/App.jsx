@@ -24,6 +24,7 @@ const CommunityService = lazy(() => import("./pages/CommunityService"));
 const Events = lazy(() => import("./pages/Events"));
 const ApplicationFormPage = lazy(() => import("./pages/ApplicationFormPage"));
 const ContactUs = lazy(() => import("./pages/ContactUs"));
+const EliteStudioPage = lazy(() => import("./pages/EliteStudioPage"));
 
 function App() {
   return (
@@ -173,7 +174,7 @@ function App() {
             />
 
             <Route
-              path="/Application_Form"
+              path="/application"
               element={
                 <Fragment>
                   <ApplicationFormPage />
@@ -187,6 +188,16 @@ function App() {
               element={
                 <Fragment>
                   <ContactUs />
+                  <Footer />
+                </Fragment>
+              }
+            />
+
+            <Route
+              path="/elite_studio"
+              element={
+                <Fragment>
+                  <EliteStudioPage />
                   <Footer />
                 </Fragment>
               }

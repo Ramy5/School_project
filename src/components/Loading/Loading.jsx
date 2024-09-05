@@ -78,7 +78,7 @@ const Loading = ({ pageName }) => {
         </svg>
       </div>
       <div className="text-animation-container">
-        <h1 className="text-animation" data-text={pageName}>
+        <h1 className="text-animation text-3xl  md:text-4xl lg:text-5xl" data-text={pageName}>
           {pageName}
         </h1>
       </div>

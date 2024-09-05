@@ -177,11 +177,13 @@ const ApplicationFormPage = () => {
                     </label>
                   </div>
 
-                  <button
-                    className={`w-full bg-mainColor rounded-lg mt-8 m-auto py-4 text-white`}
-                  >
-                    <p>Submit</p>
-                  </button>
+                  <div className="flex justify-center">
+                    <button
+                      className={`w-full bg-mainColor rounded-lg mt-8 m-auto py-4 text-white btn lg:w-3/4 self-end`}
+                    >
+                      <p>Submit</p>
+                    </button>
+                  </div>
                 </Form>
               );
             }}

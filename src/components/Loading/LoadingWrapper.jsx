@@ -21,8 +21,9 @@ const LoadingWrapper = ({ children }) => {
     "/international_day": "International Day",
     "/community_service": "Community Service",
     "/events": "Events",
-    "/Application_Form": "ApplicationForm",
+    "/application": "Application Form",
     "/Contact_Us": "Contact Us",
+    "/elite_studio": "Elite Studio",
   };
 
   const pageName = pageNames[location.pathname] || "Page";

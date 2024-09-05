@@ -506,7 +506,6 @@ body {
 
 .text-animation {
   color: white;
-  font-size: 50px;
   font-weight: bold;
   overflow: hidden;
   text-align: center;
@@ -534,70 +533,13 @@ body {
 }
 /* End Loding Page */
 
-/* Start Input */
-.label-float {
-  position: relative;
-  padding-top: 13px;
-}
-
-.label-float input,
-.label-float textarea {
-  border: 1px solid lightgrey;
-  border-radius: 5px;
-  outline: none;
-  min-width: 250px;
-  padding: 15px 20px;
-  font-size: 16px;
-  transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -webkit-appearance: none;
-}
-
-.label-float input:focus,
-.label-float textarea:focus {
-  border: 2px solid #ff9f67;
-}
-
-.label-float input::placeholder,
-.label-float textarea::placeholder {
-  color: transparent;
-}
-
-.label-float label {
-  pointer-events: none;
-  position: absolute;
-  top: calc(50% - 10px);
-  transition: all 0.1s linear;
-  -webkit-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  background-color: white;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-.label-float input:required:invalid + label:before,
-.label-float textarea:required:invalid + label:before {
-  content: "*";
-}
-.label-float input:focus + label,
-.label-float input:not(:placeholder-shown) + label,
-.label-float textarea:focus + label,
-.label-float textarea:not(:placeholder-shown) + label {
-  font-size: 14px;
-  top: 0;
-  color: #ff9f67;
-}
-
-/* End Input */
-
 .btn {
   padding: 15px 25px;
   border: unset;
   border-radius: 0.5rem;
-  color: #212121;
+  color: white;
   z-index: 1;
-  background: #e8e8e8;
+  background: #09a5c1;
   position: relative;
   font-weight: 1000;
   font-size: 17px;
@@ -615,7 +557,7 @@ body {
   height: 100%;
   width: 0;
   border-radius: 0.5rem;
-  background-color: #212121;
+  background-color: #d69929;
   z-index: -1;
   -webkit-box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
   box-shadow: 4px 8px 19px -3px rgba(0, 0, 0, 0.27);
@@ -630,23 +572,5 @@ body {
   width: 100%;
 }
 
-/* Custom styles for leaflet map controls */
-.leaflet-control-attribution {
-  color: white !important;
-}
 
-.leaflet-control-zoom a {
-  color: white !important;
-}
-
-/* Customize zoom control buttons */
-.leaflet-control-zoom-in,
-.leaflet-control-zoom-out {
-  background: #333; /* Dark background */
-  color: white; /* White text */
-}
-
-/* Add custom styles to the map container */
-.leaflet-container {
-  border: 2px solid #333; /* Dark border */
-}
+/* =========================== */
