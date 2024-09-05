@@ -96,7 +96,7 @@ const DropDownNavBar = ({ dropdownNavBar, setDropdownNavBar }) => {
       items: [
         {
           title: "Application Form",
-          link: "Application_Form",
+          link: "/application",
         },
       ],
     },
@@ -127,7 +127,7 @@ const DropDownNavBar = ({ dropdownNavBar, setDropdownNavBar }) => {
 
   return (
     <div
-      className={`w-full h-full bg-mainColor fixed transform transition-transform duration-1000 ${
+      className={`w-full h-full navbar bg-mainColor fixed transform transition-transform duration-1000 ${
         dropdownNavBar ? "translate-y-0" : "-translate-y-full"
       }  left-0 z-50`}
     >

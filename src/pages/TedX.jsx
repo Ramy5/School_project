@@ -1,12 +1,12 @@
 import React, { useRef } from "react";
-import Landing_bg_1 from "../assets/landingPage/landing_bg_1.png";
+import Landing_bg_4 from "../assets/landingPage/landing_bg_4.png";
 import { LandingPage } from "../components";
 
 const TedX = () => {
 
   return (
     <div>
-      <LandingPage title="Tedx" image={Landing_bg_1} />
+      <LandingPage title="Tedx" image={Landing_bg_4} />
 
       <div className="mx-6 md:mx-12 lg:mx-20">
         <div className="my-16">

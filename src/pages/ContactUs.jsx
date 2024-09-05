@@ -148,7 +148,7 @@ const ContactUs = () => {
                     </div>
 
                     <button
-                      className={`w-full bg-mainColor rounded-lg mt-8 m-auto py-4 text-white`}
+                      className={`w-full bg-mainColor rounded-lg mt-8 m-auto py-4 text-white btn`}
                     >
                       <p>Submit</p>
                     </button>
@@ -160,7 +160,7 @@ const ContactUs = () => {
                       style={{ width: "100%" }}
                       allowfullscreen=""
                       loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade"
+                      referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                   </div>
                 </Form>
@@ -177,7 +177,7 @@ const ContactUs = () => {
             <h2 className="my-5 font-semibold text-xl">Enrolling In Elite</h2>
             <p className="font-semibold text-xl">Join the Elite Family Now!</p>
 
-            <div className="flex items-center justify-center gap-4 pt-12 mt-2">
+            <div className="flex items-center justify-center gap-4 mt-6 pt-4 overflow-hidden">
               <div className="relative group bg-[#00A6C5] p-1 rounded-sm">
                 <FaFacebookF
                   size={26}
