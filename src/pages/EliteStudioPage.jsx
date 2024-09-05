@@ -111,8 +111,8 @@ const EliteStudio = () => {
         </div>
       </div>
 
-      <div className="p-8 sm:px-12 md:px-16 lg:px-20 grid grid-cols-10 mb-16 h-[500px]">
-        <div className="col-span-4 px-8 overflow-y-scroll">
+      <div className="p-8 sm:px-12 md:px-16 lg:px-20 grid grid-cols-1 lg:grid-cols-10 mb-16 h-full lg:h-[500px] gap-y-8">
+        <div className="col-span-4 px-0 md:px-8 overflow-y-scroll h-[400px]">
           <div className="flex justify-between border-b pb-4">
             <h2 className="font-semibold text-lg">Playlist</h2>
             <p>9 Videos</p>
@@ -144,7 +144,7 @@ const EliteStudio = () => {
               ))}
           </ul>
         </div>
-        <div className="col-span-6 flex justify-between px-2">
+        <div className="col-span-6 flex justify-between px-2 h-[400px]">
           <iframe
             width="100%"
             height="315"
