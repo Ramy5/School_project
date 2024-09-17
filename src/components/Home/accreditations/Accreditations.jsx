@@ -10,33 +10,29 @@ import Accreditations_6 from "../../../assets/Accreditations/Accreditations_6.sv
 import Accreditations_7 from "../../../assets/Accreditations/Accreditations_7.svg";
 import Accreditations_8 from "../../../assets/Accreditations/Accreditations_8.svg";
 
-const Accreditations = () => {
+const Accreditations = ({ data }) => {
+  console.log("🚀 ~ Accreditations ~ data:", data);
   useEffect(() => {
     Aos.init({
       duration: 1000,
     });
   }, []);
 
-  const AccreditationsData = [
-    { image: Accreditations_1 },
-    { image: Accreditations_2 },
-    { image: Accreditations_3 },
-    { image: Accreditations_4 },
-    { image: Accreditations_5 },
-    { image: Accreditations_6 },
-    { image: Accreditations_7 },
-    { image: Accreditations_8 },
-  ];
+  const AccreditationsData = data.items.map((item) => ({
+    image: item.value,
+  }));
 
   return (
     <section className="my-16" data-aos="fade-up">
       <div className="my-16 mx-4 sm:mx-20">
         <h2 className="text-center text-mainColor font-semibold text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-5 ">
-          ACCREDITATIONS
+          {data.info[0].value}
         </h2>
-        <p data-aos="fade-up" className="text-center mb-20 text-lg md:text-xl xl:text-2xl leading-9">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br />{" "}
-          eiusmod tempor incididunt ut labore et dolore magna aliqua
+        <p
+          data-aos="fade-up"
+          className="text-center mb-20 text-lg md:text-xl xl:text-2xl leading-9"
+        >
+          {data.info[1].value}
         </p>
       </div>
 

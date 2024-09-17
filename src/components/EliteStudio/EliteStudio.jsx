@@ -8,7 +8,8 @@ import EliteStudio_4 from "../../assets/EliteStudio/EliteStudio_4.svg";
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import Aos from "aos";
 
-const EliteStudio = () => {
+const EliteStudio = ({ data }) => {
+
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
@@ -19,28 +20,11 @@ const EliteStudio = () => {
     });
   }, []);
 
-  const EliteStudioData = [
-    {
-      image: EliteStudio_1,
-      name: "mhmet ali",
-      position_title: "English teacher",
-    },
-    {
-      image: EliteStudio_2,
-      name: "Defne sarkan",
-      position_title: "Mathematics teacher",
-    },
-    {
-      image: EliteStudio_3,
-      name: "Meral fatih",
-      position_title: "science teacher",
-    },
-    {
-      image: EliteStudio_4,
-      name: "Ahmet fatih",
-      position_title: "Turkyie teacher",
-    },
-  ];
+  const EliteStudioData = data.items.map((item, index) => ({
+    image: item.value,
+    per: item.per,
+    title: item.head,
+  }));
 
   const handlePrev = () => {
     swiperRef.current?.slidePrev();
@@ -75,9 +59,11 @@ const EliteStudio = () => {
           data-aos="zoom-in-down"
         >
           <div className="">
-            <h2 className="font-semibold text-mainColor">Elite Studio</h2>
+            <h2 className="font-semibold text-mainColor">
+              {data.info[0].value}
+            </h2>
             <p className="text-xl md:text-2xl xl:text-3xl mt-1">
-              Elite Studio Podcast
+              {data.info[1].value}
             </p>
           </div>
           <div className="flex items-center gap-5 relative z-50">
@@ -129,16 +115,12 @@ const EliteStudio = () => {
               EliteStudioData.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="relative">
-                      <img
-                        src={item.image}
-                        alt={item.name}
-                        className="w-full"
-                      />
+                    <img src={item.image} alt={item.title} className="w-full" />
                     <div className="absolute bottom-12 left-1/2 -translate-x-1/2 text-center text-white">
                       <h2 className="font-semibold text-2xl uppercase whitespace-nowrap">
-                        {item.name}
+                        {item.title}
                       </h2>
-                      <p className="whitespace-nowrap">{item.position_title}</p>
+                      <p className="whitespace-nowrap">{item.per}</p>
                     </div>
                   </div>
                 </SwiperSlide>

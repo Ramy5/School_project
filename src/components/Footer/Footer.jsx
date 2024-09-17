@@ -4,38 +4,50 @@ import {
   FaInstagram,
   FaTwitter,
 } from "react-icons/fa6";
-import Footer_1 from "../../assets/Footer/footer_1.svg";
-import Footer_2 from "../../assets/Footer/footer_2.svg";
-import Footer_3 from "../../assets/Footer/footer_3.svg";
-import Footer_4 from "../../assets/Footer/footer_4.svg";
-import Footer_5 from "../../assets/Footer/footer_5.svg";
-import Footer_6 from "../../assets/Footer/footer_6.svg";
 import Footer_Logo from "../../assets/Footer/footer_logo.svg";
 import { GoArrowUpRight } from "react-icons/go";
+import Loading from "../Loading/Loading";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Footer = () => {
+  const [dataSource, setDataSource] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchFooterData = async () => {
+      try {
+        const response = await axios.get("https://elite.tasweka.com/api/home");
+        setDataSource(response.data.data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchFooterData();
+  }, []);
+
+  const data = dataSource && dataSource.footer;
+
+  const imageFooter = data?.items?.map((item) => ({
+    image: item.value,
+  }));
+
+  if (loading) return <Loading pageNames="Home" />;
+  if (error) return <div>Error: {error.message}</div>;
+
   return (
     <footer className="">
       <div className="bg-[#272F56] grid grid-cols-1 lg:grid-cols-5 md:grid-cols-2 sm:grid-cols-1 gap-8 container_section pb-20 pt-20 sm:pt-32 md:pt-40 relative px-5 sm:px-12">
         <div className="hidden sm:flex w-full absolute top-0 -mt-16 lg:-mt-24">
-          <div>
-            <img src={Footer_1} alt="Footer" className="ms-0" />
-          </div>
-          <div>
-            <img src={Footer_2} alt="Footer" />
-          </div>
-          <div>
-            <img src={Footer_3} alt="Footer" />
-          </div>
-          <div>
-            <img src={Footer_4} alt="Footer" />
-          </div>
-          <div>
-            <img src={Footer_5} alt="Footer" />
-          </div>
-          <div>
-            <img src={Footer_6} alt="Footer" className="me-4" />
-          </div>
+          {imageFooter.map((item, index) => (
+            <div key={index}>
+              <img src={item.image} alt="Footer" />
+            </div>
+          ))}
         </div>
         <div className="text-center md:text-start">
           <div className="w-full flex justify-center md:justify-start">

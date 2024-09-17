@@ -17,7 +17,7 @@ import { BiParagraph } from "react-icons/bi";
 import DropDownNavBar from "../DropDownNavBar/DropDownNavBar";
 import { Link } from "react-router-dom";
 
-const LandingPage = ({ content, title, subTitle, image }) => {
+const LandingPage = ({ content, title, subTitle, image, data }) => {
   const locationPath = location.pathname;
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -27,39 +27,19 @@ const LandingPage = ({ content, title, subTitle, image }) => {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesAndContent.length);
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % imagesAndContent?.length);
     }, 2000);
 
     return () => clearInterval(interval);
   }, []);
 
-  const imagesAndContent = [
-    // {
-    //   imageSrc: Landing_bg_1,
-    //   title: "Elite Academy International School",
-    //   content: "The New Turkish International school, For Primary & Secondary.",
-    // },
-    {
-      imageSrc: Landing_bg_2,
-      title: "Elite Academy International School",
-      content: "The New Turkish International school, For Primary & Secondary.",
-    },
-    {
-      imageSrc: Landing_bg_3,
-      title: "Elite Academy International School",
-      content: "The New Turkish International school, For Primary & Secondary.",
-    },
-    {
-      imageSrc: Landing_bg_4,
-      title: "Elite Academy International School",
-      content: "The New Turkish International school, For Primary & Secondary.",
-    },
-    // {
-    //   imageSrc: Landing_bg_5,
-    //   title: "Elite Academy International School",
-    //   content: "The New Turkish International school, For Primary & Secondary.",
-    // },
-  ];
+  const imagesAndContent = data?.headerImage.map((image, index) => {
+    return {
+      imageSrc: image.value, 
+      title: data.headerInfo.find(info => info.key === 'hero-h1')?.value || '',
+      content: data.headerInfo.find(info => info.key === 'hero-p')?.value || ''
+    };
+  });
 
   return (
     <div className="relative w-full">
@@ -76,17 +56,17 @@ const LandingPage = ({ content, title, subTitle, image }) => {
       {locationPath === "/" ? (
         <div className="text-center relative">
           <img
-            src={imagesAndContent[currentIndex].imageSrc}
+            src={imagesAndContent && imagesAndContent[currentIndex].imageSrc}
             alt={`Slide ${currentIndex + 1}`}
             className="w-full h-screen transition-opacity duration-500 ease-in-out inline-block object-cover"
             onLoad={() => setIsLoaded(true)}
           />
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 z-40 w-[80%] sm:w-[60%] md:w-[55%] lg:w-[50%]">
             <p className="text-mainColor font-medium text-xl mb-4">
-              {imagesAndContent[currentIndex].title}
+              {imagesAndContent && imagesAndContent[currentIndex].title}
             </p>
             <h2 className="text-[#EBECF0] font-bold text-xl sm:text-3xl md:text-4xl lg:text-5xl">
-              {imagesAndContent[currentIndex].content}
+              {imagesAndContent && imagesAndContent[currentIndex].content}
             </h2>
           </div>
         </div>
