@@ -21,29 +21,53 @@ import NewsAnnouncement from "../components/NewsAnnouncement/NewsAnnouncement";
 import CampusLife from "../components/CampusLife/CampusLife";
 import Testimonials from "../components/Testimonials/Testimonials";
 import Loading from "../components/Loading/Loading";
+import axios from "axios";
+import { Suspense, useEffect, useState } from "react";
+import Footer from "../components/Footer/Footer";
 
 const Home = () => {
+  const [dataSource, setDataSource] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("https://elite.tasweka.com/api/home");
+        setDataSource(response.data.data);
+      } catch (err) {
+        setError(err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) return <Loading pageNames="Home" />;
+  if (error) return <div>Error: {error.message}</div>;
+
   return (
     <div>
-      <LandingPage />
-      <Campuses />
-      <MessageSchool />
-      <OurProcess />
+      <LandingPage data={dataSource && dataSource.headers} />
+      <Campuses data={dataSource && dataSource.about} />
+      <MessageSchool data={dataSource && dataSource.school} />
+      <OurProcess data={dataSource && dataSource.process} />
       <ApplicationForm />
-      <SchoolType />
-      <EliteStudio />
-      <Activities />
-      <EliteGraduates />
+      <SchoolType data={dataSource && dataSource.images} />
+      <EliteStudio data={dataSource && dataSource.Studio} />
+      <Activities data={dataSource && dataSource.activities} />
+      <EliteGraduates data={dataSource && dataSource.graduates} />
       <NewsAnnouncement />
-      <CampusLife />
-      <Accreditations />
+      <CampusLife data={dataSource && dataSource["student-life"]} />
+      <Accreditations data={dataSource && dataSource.accreditations} />
       <Testimonials />
     </div>
   );
 };
 
 export default Home;
-
 
 // <main className="absolute top-0 bottom-0 left-0 right-0">
 // <Swiper

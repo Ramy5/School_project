@@ -1,50 +1,44 @@
 import React, { useEffect } from "react";
-import EliteGraduates_1 from "../../assets/EliteGraduates/EliteGraduates_1.png";
-import EliteGraduates_2 from "../../assets/EliteGraduates/EliteGraduates_2.png";
-import EliteGraduates_3 from "../../assets/EliteGraduates/EliteGraduates_3.png";
-import EliteGraduates_4 from "../../assets/EliteGraduates/EliteGraduates_4.png";
-import EliteGraduates_5 from "../../assets/EliteGraduates/EliteGraduates_5.png";
-import EliteGraduates_6 from "../../assets/EliteGraduates/EliteGraduates_6.png";
-import EliteGraduates_7 from "../../assets/EliteGraduates/EliteGraduates_7.png";
-import EliteGraduates_8 from "../../assets/EliteGraduates/EliteGraduates_8.svg";
-import EliteGraduates_9 from "../../assets/EliteGraduates/EliteGraduates_9.png";
-import EliteGraduates_10 from "../../assets/EliteGraduates/EliteGraduates_10.png";
-import { useLocation } from "react-router-dom";
 import Aos from "aos";
 
-const EliteGraduates = () => {
+const EliteGraduates = ({ data }) => {
   useEffect(() => {
     Aos.init({
       duration: 1000,
     });
   }, []);
-  const location = useLocation();
-  const locationPath = location.pathname;
+
+  const eliteGraduates_0 = data.items?.[0]?.value;
+  const eliteGraduates_1 = data.items?.[1]?.value;
+  const eliteGraduates_2 = data.items?.[2]?.value;
+  const eliteGraduates_3 = data.items?.[3]?.value;
+  const eliteGraduates_4 = data.items?.[4]?.value;
+  const eliteGraduates_5 = data.items?.[5]?.value;
+  const eliteGraduates_6 = data.items?.[6]?.value;
+  const eliteGraduates_7 = data.items?.[7]?.value;
+  const eliteGraduates_8 = data.items?.[8]?.value;
+  const eliteGraduates_9 = data.items?.[9]?.value;
 
   return (
     <div className="bg-white p-4 md:p-8 container_section overflow-x-hidden">
       <div>
         <div className="md:hidden block text-center mb-12">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-6xl font-bold text-mainColor my-5 ">
-            Elite Graduates
+            {data.info[0].value}
           </h1>
-          <p className="mt-2 md:text-base lg:text-lg">
-            But I Must Explain To You How All This Mistaken Idea Of Denouncing
-            Pleasure <br /> And Praising Pain Was Born And I Will Give You A
-            Cete Account Of The System
-          </p>
+          <p className="mt-2 md:text-base lg:text-lg">{data.info[1].value}</p>
         </div>
         <div className="text-center mb-4 gap-3 md:hidden flex">
           <div className="w-full" data-aos="zoom-in-left">
             <img
-              src={EliteGraduates_1}
+              src={eliteGraduates_0}
               alt="Graduate"
               className="rounded-md h-full w-full"
             />
           </div>
           <div className="w-full" data-aos="zoom-in-right">
             <img
-              src={EliteGraduates_2}
+              src={eliteGraduates_1}
               alt="Graduate"
               className="rounded-md h-full w-full"
             />
@@ -54,24 +48,20 @@ const EliteGraduates = () => {
       <div className="text-center mb-4 gap-3 md:flex justify-between hidden">
         <div data-aos="zoom-in-right">
           <img
-            src={EliteGraduates_1}
+            src={eliteGraduates_0}
             alt="Graduate"
             className="rounded-md h-full w-full"
           />
         </div>
         <div className="md:block hidden" data-aos="zoom-in-down">
           <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-6xl font-bold text-mainColor my-5 ">
-            Elite Graduates
+            {data.info[0].value}
           </h1>
-          <p className="mt-2 md:text-base lg:text-lg">
-            But I Must Explain To You How All This Mistaken Idea Of Denouncing
-            Pleasure <br /> And Praising Pain Was Born And I Will Give You A
-            Cete Account Of The System
-          </p>
+          <p className="mt-2 md:text-base lg:text-lg">{data.info[1].value}</p>
         </div>
         <div data-aos="zoom-in-left">
           <img
-            src={EliteGraduates_2}
+            src={eliteGraduates_1}
             alt="Graduate"
             className="rounded-md h-full w-full"
           />
@@ -85,14 +75,14 @@ const EliteGraduates = () => {
         <div className="flex gap-3">
           <div>
             <img
-              src={EliteGraduates_3}
+              src={eliteGraduates_2}
               alt="Graduate"
               className="rounded-md h-full"
             />
           </div>
           <div>
             <img
-              src={EliteGraduates_4}
+              src={eliteGraduates_3}
               alt="Graduate"
               className="rounded-md h-full"
             />
@@ -101,14 +91,14 @@ const EliteGraduates = () => {
         <div className="flex gap-3">
           <div>
             <img
-              src={EliteGraduates_5}
+              src={eliteGraduates_4}
               alt="Graduate"
               className="rounded-md h-full "
             />
           </div>
           <div>
             <img
-              src={EliteGraduates_6}
+              src={eliteGraduates_5}
               alt="Graduate"
               className="rounded-md h-full"
             />
@@ -123,14 +113,14 @@ const EliteGraduates = () => {
         <div className="flex gap-3">
           <div>
             <img
-              src={EliteGraduates_7}
+              src={eliteGraduates_6}
               alt="Graduate"
               className="rounded-md h-full"
             />
           </div>
           <div>
             <img
-              src={EliteGraduates_8}
+              src={eliteGraduates_7}
               alt="Graduate"
               className="rounded-md h-full"
             />
@@ -139,14 +129,14 @@ const EliteGraduates = () => {
         <div className="flex gap-3">
           <div>
             <img
-              src={EliteGraduates_9}
+              src={eliteGraduates_8}
               alt="Graduate"
               className="rounded-md h-full "
             />
           </div>
           <div>
             <img
-              src={EliteGraduates_10}
+              src={eliteGraduates_9}
               alt="Graduate"
               className="rounded-md h-full"
             />

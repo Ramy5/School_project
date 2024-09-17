@@ -11,24 +11,26 @@ const Testimonials = () => {
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
+  const [activeIndex, setActiveIndex] = useState(0);
+  console.log("🚀 ~ Testimonials ~ activeIndex:", activeIndex);
 
   const TestimonialsData = [
     {
       image: Testimonials_3,
       desc: "“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur”",
-      name: "Mehmet Namik ",
+      name: "Mehmet ",
       type: "Murat’s Parents",
     },
     {
       image: Testimonials_3,
       desc: "“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur”",
-      name: "Mehmet Namik ",
+      name: " Namik ",
       type: "Murat’s Parents",
     },
     {
       image: Testimonials_3,
       desc: "“Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur”",
-      name: "Mehmet Namik ",
+      name: " Namik Mehmet",
       type: "Murat’s Parents",
     },
     {
@@ -69,6 +71,10 @@ const Testimonials = () => {
       };
     }
   }, []);
+
+  const handleSlideChange = (swiper) => {
+    setActiveIndex(swiper.activeIndex);
+  };
   return (
     <div className="container_section mt-20 mb-32">
       <div className="text-center">
@@ -85,6 +91,7 @@ const Testimonials = () => {
             setIsBeginning(swiper.isBeginning);
             setIsEnd(swiper.isEnd);
           }}
+          onSlideChange={handleSlideChange}
           className="overflow-visible"
         >
           {TestimonialsData &&
@@ -92,7 +99,11 @@ const Testimonials = () => {
               <SwiperSlide key={index}>
                 <div className="mt-8 px-4 md:px-12 lg:px-40">
                   <div className="relative">
-                    <img src={Testimonials_1} alt="Testimonials" className="w-11 md:w-20" />
+                    <img
+                      src={Testimonials_1}
+                      alt="Testimonials"
+                      className="w-11 md:w-20"
+                    />
                     <div className="flex gap-2 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                       <FaStar className="fill-[#FE8D4D] w-6 h-6 md:w-8 md:h-8" />
                       <FaStar className="fill-[#FE8D4D] w-6 h-6 md:w-8 md:h-8" />
@@ -110,23 +121,30 @@ const Testimonials = () => {
                       alt="Testimonials"
                       className="ml-auto w-11 md:w-20"
                     />
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-14 md:mt-20">
-                      <img
-                        src={item.image}
-                        alt="Testimonials"
-                        className="m-auto"
-                      />
-                      <div className="text-center w-fit">
-                        <h2 className="text-base md:text-lg">{item.name}</h2>
-                        <p className="text-sm md:text-base">{item.type}</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
               </SwiperSlide>
             ))}
         </Swiper>
-        <div className="mt-36 flex justify-center items-center">
+        {TestimonialsData && TestimonialsData[activeIndex] && (
+          <div className="mt-2 text-center">
+            <img
+              src={TestimonialsData[activeIndex].image}
+              alt="Testimonials"
+              className="m-auto"
+            />
+            <div className="text-center w-full">
+              <h2 className="text-base md:text-lg">
+                {TestimonialsData[activeIndex].name}
+              </h2>
+              <p className="text-sm md:text-base">
+                {TestimonialsData[activeIndex].type}
+              </p>
+            </div>
+          </div>
+        )}
+
+        <div className="mt-5 flex justify-center items-center">
           <div className="flex items-center gap-5">
             <button
               onClick={handlePrev}

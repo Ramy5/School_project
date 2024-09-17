@@ -3,54 +3,28 @@ import "swiper/css";
 import Aos from "aos";
 import { useEffect } from "react";
 
-const Activities = () => {
+const Activities = ({ data }) => {
   useEffect(() => {
     Aos.init({
       duration: 1000,
     });
   }, []);
-  const ActivitiesData = [
-    {
-      image:
-        "https://aljazari.com.tr/wp-content/uploads/2023/05/MicrosoftTeams-image.jpg",
-      title: "Natural sciences workshop",
-      desc: "We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world",
-    },
-    {
-      image:
-        "https://aljazari.com.tr/wp-content/uploads/2023/05/MicrosoftTeams-image.jpg",
-      title: "Natural sciences workshop",
-      desc: "We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world",
-    },
-    {
-      image:
-        "https://aljazari.com.tr/wp-content/uploads/2023/05/MicrosoftTeams-image.jpg",
-      title: "Natural sciences workshop",
-      desc: "We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world",
-    },
-    {
-      image:
-        "https://aljazari.com.tr/wp-content/uploads/2023/05/MicrosoftTeams-image.jpg",
-      title: "Natural sciences workshop",
-      desc: "We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world",
-    },
-    {
-      image:
-        "https://aljazari.com.tr/wp-content/uploads/2023/05/MicrosoftTeams-image.jpg",
-      title: "Natural sciences workshop",
-      desc: "We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world",
-    },
-    {
-      image:
-        "https://aljazari.com.tr/wp-content/uploads/2023/05/MicrosoftTeams-image.jpg",
-      title: "Natural sciences workshop",
-      desc: "We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world We meet in the colorful world",
-    },
-  ];
+
+  const ActivitiesData = data.items.map((item) => {
+    const [day, month] = item.date.split(" ");
+    return {
+      image: item.value,
+      per: item.per,
+      head: item.head,
+      price: item.price,
+      date: { day, month },
+    };
+  });
+
   return (
     <section className="main__padding-section">
       <h2 className="mb-20 main__head text-3xl md:text-4xl lg:text-5xl">
-        Activities
+        {data.info.value}
       </h2>
 
       <div className="relative mx:0 sm:mx-20 mb-40 cursor-pointer">
@@ -90,18 +64,20 @@ const Activities = () => {
                       className="w-full h-52"
                     />
                     <p className="absolute right-0 w-24 px-2 py-1 font-bold tracking-wider text-center uppercase bg-white rounded-l-lg top-3 text-secondColor">
-                      free
+                      {item.price}
                     </p>
                     <p className="absolute flex flex-col items-center gap-1 p-2 uppercase bg-white -bottom-8 left-4 rounded-xl">
                       <span className="text-3xl font-bold text-secondColor">
-                        20
+                        {item.date.day}
                       </span>
-                      <span className="font-bold text-secondColor">May</span>
+                      <span className="font-bold text-secondColor">
+                        {item.date.month}
+                      </span>
                     </p>
                   </div>
                   <div className="px-4 pt-12 pb-7 text-white bg-mainColor rounded-b-3xl">
-                    <h5 className="mb-3 text-2xl font-bold">{item.title}</h5>
-                    <p>{item.desc}</p>
+                    <h5 className="mb-3 text-2xl font-bold">{item.head}</h5>
+                    <p>{item.per}</p>
                   </div>
                 </SwiperSlide>
               ))}

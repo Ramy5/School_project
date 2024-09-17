@@ -6,7 +6,7 @@ import "aos/dist/aos.css";
 import { LuMoveRight } from "react-icons/lu";
 import Aos from "aos";
 
-const SchoolType = () => {
+const SchoolType = ({ data }) => {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 768);
 
   useEffect(() => {
@@ -15,23 +15,11 @@ const SchoolType = () => {
     });
   }, []);
 
-  const schoolType = [
-    {
-      index: 1,
-      image: schoolType_1,
-      title: "Elite dream school in Istanbul",
-    },
-    {
-      index: 2,
-      image: schoolType_2,
-      title: "Elite online school",
-    },
-    {
-      index: 3,
-      image: schoolType_3,
-      title: "Elite Canadian diploma",
-    },
-  ];
+  const schoolType = data.items.map((item, index) => ({
+    index: index + 1,
+    image: item.value,
+    title: item.head,
+  }));
 
   useEffect(() => {
     Aos.init({ duration: 1000 });
@@ -52,7 +40,6 @@ const SchoolType = () => {
             return (
               <div
                 key={index}
-                // data-aos="fade-down"
                 data-aos-delay={index * 250}
                 data-aos={!isSmallScreen ? "fade-up" : "fade-right"}
                 className={`relative h-1/3 md:h-full cursor-pointer !duration-500 !transition-all w-full md:w-1/3 md:hover:w-[30%]`}
