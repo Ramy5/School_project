@@ -19,14 +19,14 @@ const RoboticsContest = () => {
                 className="text-xl mb-4 text-[#0009]"
                 style={{ lineHeight: "1.8" }}
               >
-                Our school’s Robotics team proudly secured second place in a
-                recent competition, demonstrating exceptional skill and
-                innovation. The contest highlighted our students' ability to
-                design, build, and program robots with precision and creativity.
-                This achievement underscores our commitment to excellence in
-                STEM education and teamwork.
+                The STEM and Robotics Department at Elite Academy fosters
+                innovation and hands-on learning, where students engage in
+                robotics, coding, and engineering projects. With
+                state-of-the-art resources, they develop critical thinking and
+                technical skills, preparing for future success in science and
+                technology
               </p>
-              
+
               <iframe
                 width="100%"
                 height="315"
@@ -36,7 +36,6 @@ const RoboticsContest = () => {
                 onScroll={true}
                 className="border-none"
               ></iframe>
-
             </div>
           </div>
         </div>
