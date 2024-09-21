@@ -17,12 +17,10 @@ const MunParticipation = () => {
                 className="text-xl mb-4 text-[#0009]"
                 style={{ lineHeight: "1.8" }}
               >
-                Our students actively participate in Model United Nations (MUN),
-                engaging in global diplomacy and debate while representing
-                various countries. This experience sharpens their public
-                speaking, negotiation, and research skills. MUN involvement
-                reflects our commitment to developing informed, confident, and
-                globally-minded leaders.
+                Elite Academy's MUN was a blend of new friendships. Here,
+                students find themselves immersed in a dynamic environment,
+                engage in lively debates, and inspiring moments with an
+                escalating atmosphere.
               </p>
               <iframe
                 width="100%"

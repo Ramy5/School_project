@@ -83,13 +83,16 @@ const NewsAnnouncement = () => {
   }, []);
   return (
     <div className="my-16 mx:40 sm:mx-20">
-      <div className="text-center mx-4 sm:mx-20" data-aos="zoom-in-down">
+      <div className="text-center px-2" data-aos="zoom-in-down">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-mainColor mb-3">
           News & Announcement
         </h2>
-        <p className="text-[#0009] mb-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <br />
-          eiusmod tempor incididunt ut labore et dolore magna aliqua
+        <p className="text-[#0009] mb-6 w-full md:w-[90%] m-auto">
+          We are thrilled to announce several exciting updates at Elite Academy
+          that will make this academic year our best yet! From new
+          state-of-the-art facilities to innovative programs, we are continually
+          evolving to provide an exceptional learning environment for our
+          students.
         </p>
       </div>
       <div data-aos="zoom-in-up">
@@ -155,7 +158,9 @@ const NewsAnnouncement = () => {
             </button>
           </div>
           <div>
-            <button className="border-2 border-mainColor rounded-lg py-2 px-4 text-mainColor font-medium hover:bg-mainColor hover:text-white">Read more</button>
+            <button className="border-2 border-mainColor rounded-lg py-2 px-4 text-mainColor font-medium hover:bg-mainColor hover:text-white">
+              Read more
+            </button>
           </div>
         </div>
       </div>
