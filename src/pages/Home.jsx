@@ -59,7 +59,7 @@ const Home = () => {
       <EliteStudio data={dataSource && dataSource.Studio} />
       <Activities data={dataSource && dataSource.activities} />
       <EliteGraduates data={dataSource && dataSource.graduates} />
-      <NewsAnnouncement />
+      <NewsAnnouncement  />
       <CampusLife data={dataSource && dataSource["student-life"]} />
       <Accreditations data={dataSource && dataSource.accreditations} />
       <Testimonials />

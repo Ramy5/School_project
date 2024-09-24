@@ -8,6 +8,7 @@ import { FaChevronRight } from "react-icons/fa6";
 import Aos from "aos";
 
 const CampusLife = ({ data }) => {
+  console.log("🚀 ~ CampusLife ~ data:", data);
   useEffect(() => {
     Aos.init({
       duration: 1000,
@@ -67,18 +68,18 @@ const CampusLife = ({ data }) => {
         </div>
       </div>
       <div
-        className="grid sm:grid-cols-2 lg:grid-cols-1 gap-8 mt-4 lg:mt-0 overflow-y-hidden"
+        className="grid sm:grid-cols-2 lg:grid-cols-1 gap-8 mt-4 lg:mt-0 items-start overflow-y-hidden overflow-x-hidden"
         data-aos="zoom-out-right"
       >
-        {CampusLifeData &&
-          CampusLifeData.map((item, index) => (
+        {data &&
+          data.items.map((item, index) => (
             <div
               key={index}
               className="grid grid-cols-1 lg:grid-cols-9 gap-5 mb-5.5"
             >
-              <div className="col-span-full md:col-span-5">
+              <div className="col-span-full md:col-span-5 h-40 lg:h-full ">
                 <img
-                  src={item.image}
+                  src={item.value}
                   alt="CampusLife"
                   className="w-full h-full"
                 />
