@@ -311,7 +311,7 @@ const Campuses = ({ data }) => {
           data-aos={!isSmallScreen ? "fade-up" : "fade-right"}
         >
           <img
-            src={`https://elite.tasweka.com/storage/image/hero/${item.value}`}
+            src={`https://elite.medicalvisionarabia.com/storage/image/hero/${item.value}`}
             alt={`Campuses_${index + 1}`}
             className="h-full w-full bg-cover bg-center duration-300 transform md:hover:scale-105"
           />

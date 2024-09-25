@@ -33,7 +33,7 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://elite.tasweka.com/api/home");
+        const response = await axios.get("https://elite.medicalvisionarabia.com/api/home");
         setDataSource(response.data.data);
       } catch (err) {
         setError(err);

@@ -15,7 +15,7 @@ const About = () => {
     const fetchAboutData = async () => {
       try {
         const response = await axios.get(
-          "https://elite.tasweka.com/api/about-us"
+          "https://elite.medicalvisionarabia.com/api/about-us"
         );
         setDataSource(response?.data?.data?.about);
       } catch (err) {
