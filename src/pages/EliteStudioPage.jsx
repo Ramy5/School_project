@@ -18,7 +18,6 @@ const EliteStudio = () => {
   ];
 
   const [selectedVideo, setSelectedVideo] = useState(youtubeVideo[0]);
-  console.log("🚀 ~ EliteStudio ~ selectedVideo:", selectedVideo);
 
   const youtubeText = [
     {

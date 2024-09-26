@@ -8,7 +8,6 @@ import { FaChevronRight } from "react-icons/fa6";
 import Aos from "aos";
 
 const CampusLife = ({ data }) => {
-  console.log("🚀 ~ CampusLife ~ data:", data);
   useEffect(() => {
     Aos.init({
       duration: 1000,

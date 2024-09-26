@@ -7,7 +7,6 @@ import axios from "axios";
 
 const About = () => {
   const [dataSource, setDataSource] = useState(null);
-  console.log("🚀 ~ Home ~ dataSource:", dataSource);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
