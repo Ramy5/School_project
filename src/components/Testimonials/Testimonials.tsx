@@ -12,7 +12,6 @@ const Testimonials = () => {
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
-  console.log("🚀 ~ Testimonials ~ activeIndex:", activeIndex);
 
   const TestimonialsData = [
     {

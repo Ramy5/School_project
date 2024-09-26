@@ -27,13 +27,16 @@ import Footer from "../components/Footer/Footer";
 
 const Home = () => {
   const [dataSource, setDataSource] = useState(null);
+  console.log("🚀 ~ Home ~ dataSource:", dataSource);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("https://elite.medicalvisionarabia.com/api/home");
+        const response = await axios.get(
+          "https://elite.medicalvisionarabia.com/api/home"
+        );
         setDataSource(response.data.data);
       } catch (err) {
         setError(err);
@@ -59,7 +62,7 @@ const Home = () => {
       <EliteStudio data={dataSource && dataSource.Studio} />
       <Activities data={dataSource && dataSource.activities} />
       <EliteGraduates data={dataSource && dataSource.graduates} />
-      <NewsAnnouncement  />
+      <NewsAnnouncement data={dataSource && dataSource.articles}/>
       <CampusLife data={dataSource && dataSource["student-life"]} />
       <Accreditations data={dataSource && dataSource.accreditations} />
       <Testimonials />

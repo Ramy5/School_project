@@ -11,7 +11,6 @@ import Accreditations_7 from "../../../assets/Accreditations/Accreditations_7.sv
 import Accreditations_8 from "../../../assets/Accreditations/Accreditations_8.svg";
 
 const Accreditations = ({ data }) => {
-  console.log("🚀 ~ Accreditations ~ data:", data);
   useEffect(() => {
     Aos.init({
       duration: 1000,

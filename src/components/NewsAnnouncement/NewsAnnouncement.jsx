@@ -7,7 +7,8 @@ import NewsAnnouncement_3 from "../../assets/NewsAnnouncement/NewsAnnouncement_3
 import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
 import Aos from "aos";
 
-const NewsAnnouncement = () => {
+const NewsAnnouncement = ({ data }) => {
+  console.log("🚀 ~ NewsAnnouncement ~ data:", data)
   const swiperRef = useRef(null);
   const [isBeginning, setIsBeginning] = useState(true);
   const [isEnd, setIsEnd] = useState(false);
@@ -117,17 +118,17 @@ const NewsAnnouncement = () => {
             setIsEnd(swiper.isEnd);
           }}
         >
-          {NewsAnnouncementData &&
-            NewsAnnouncementData.map((item, index) => (
+          {data &&
+            data.items.map((item, index) => (
               <SwiperSlide key={index}>
                 <div className="main_shadow p-4 my-2 rounded-lg">
-                  <img src={item.image} alt={item.name} className="w-full" />
+                  <img src={item.value} alt={item.name} className="w-full" />
                   <div className="text-start">
                     <h2 className="font-semibold text-2xl mt-5">
-                      {item.title}
+                      {item.head}
                     </h2>
-                    <p className="my-2 text-[#A3ABB6]">{item.date}</p>
-                    <p className="text-[#080A12]">{item.desc}</p>
+                    <p className="my-2 text-[#A3ABB6]">By Admin, on Nov 23th, 2020  |   1 days ago</p>
+                    <p className="text-[#080A12]">{item.per}</p>
                     <button className="text-mainColor font-medium my-3">
                       Read more
                     </button>
